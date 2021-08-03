@@ -1,0 +1,208 @@
+$color: black;
+$col-common: #FFFEF2;
+$col-uncommon: 0; 
+$col-rare: #D4AF37; 
+$col-mythic: lighten(#673ab7, 10%);
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+.canvas {
+  width: 100vw;
+  height: 100vh;
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+}
+
+.base {
+  // position: absolute;
+  display: flex;
+  height: 350px;
+  width: 250px;
+  background-color: $color;
+  border-radius: 10px/10px;
+  // position: relative;
+  // box-shadow: 0px 6px 5px 1px rgba(0,0,0,0.56);
+  align-items: center;
+  justify-content: center;
+  //transform: translateX(50px) translateY(50px);
+  transform-origin: center;
+  // transition: box-shadow 1s, transform 1s;
+//   &:hover {
+//     box-shadow: 0px 8px 15px 5px rgba(212,175,55,0.7);
+//     transform: translateY(-3px);
+//   }
+  /* Card Shine
+  &:before {
+    position: absolute;
+    content: '';
+    display: inline-block;
+    top: -180px;
+    left: 0;
+    width: 30px;
+    height: 100%;
+    background-color: #fff;
+    animation: shiny-btn1 1s ease-in-out infinite;
+  }
+  @-webkit-keyframes shiny-btn1 {
+    0% { -webkit-transform: scale(0) rotate(45deg); opacity: 0; }
+    80% { -webkit-transform: scale(0) rotate(45deg); opacity: 0.5; }
+    81% { -webkit-transform: scale(4) rotate(45deg); opacity: 1; }
+    100% { -webkit-transform: scale(50) rotate(45deg); opacity: 0; }
+  }
+  */
+}
+
+.inner-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 91%; 
+  height: 91%;
+  // linear gradient for a solid plain color
+  background-color: $col-common;
+  border: 3px outset rgba(255,255,255,.5);
+  background-image: url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/176622e8-bf4c-4d60-9a64-b75cff245c16/d3inhyi-28e16cb6-9d37-4a6e-bdc6-0d7fcf0af574.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzE3NjYyMmU4LWJmNGMtNGQ2MC05YTY0LWI3NWNmZjI0NWMxNlwvZDNpbmh5aS0yOGUxNmNiNi05ZDM3LTRhNmUtYmRjNi0wZDdmY2YwYWY1NzQucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.gqQUvb9pdKz_BDtsTqXkpM1_aUHox6IXyveVcugbntg');
+  // background:linear-gradient(90deg, rgba(162,255,209,1) 0%, rgba(131,255,255,1) 50%, rgba(250,176,255,1) 100%), url('https://i.pinimg.com/originals/68/dc/6b/68dc6b718f9f5bdd7bc87667586fbc7d.jpg');
+  background-blend-mode: luminosity;// luminosity ; //luminosity; overlay
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.content {
+  display: flex; 
+  flex-direction: column;
+  flex-grow: 2;
+  height: 90%;
+  width: 100%;
+  padding: .3rem .9rem;
+  border-radius: 10px/10px;
+}
+
+.title {
+  display: flex; 
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5px;
+  margin-bottom: 5px;
+  height: 30px;
+  font-size: 1.2rem;
+  svg {
+    width: 30px; 
+    height: 30px;
+    transition: fill 1s; 
+    &:first-child {
+      width: 28px;
+      height: 28px;
+    }
+    &:last-child {
+      margin-left: 5px;
+    }
+  }
+  &:hover {
+    fill: white;
+  }
+}
+
+.picture {
+  display: flex;
+  // flex-direction: column; 
+  // justify-content: flex-end;
+  border: 2px solid black;
+  height: 100%;
+  font-size: .8rem;
+  background-color: white;
+  box-shadow: 0px 0px 5px 1px rgba(0,0,0,.7);
+  // background:
+// linear-gradient(90deg, rgba(162,255,209,1) 0%, rgba(131,255,255,1) 50%, rgba(250,176,255,1) 100%), url('https://previews.dropbox.com/p/thumb/ABNa1rbJSHyxoqZidzWf6II_nJs91QJ3U3FHTDyYuQOSrItk7UiY266dpogYHFk2o6tS688pNUV_J-kJzPJa0cmqggYxyOlXSvMruohdozJu8ef9AAyTRqEfIyKAUgY0D5fv9yNtlavdM_8p6_-FaIg6s2oCFwqIm3i__s8Nabjkr3h1MoRLJFdjvbkQ0Xk_Sc2VGA2pQgj73Qy4WE1MokoXHSqD9bJBQjn-rObpc2uA1wdMfgzf5Xichd4umAkCs3Id1AV7OjbYUOAGVyT9ebMEcxLRLedCkOoHydAcU1vSz6r0Kcz6H2lVItfkub5PIitv67kV7TN-roqR_72Q1iUytSzJvFGEM-DJTenYEQQ00w/p.png?fv_content=true&size_mode=5');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-blend-mode: overlay;
+  &:hover .description {
+    display: block;
+  }
+}
+
+.stars {
+  padding: 4px 10px;
+  display: flex;
+  justify-content: center;
+  margin: 10px 0px 5px;
+  border: 1px outset white;
+  background-color: rgb(255, 255, 255, .40);
+}
+
+.star {
+  fill: black; //darken(#FF9AA2, 5%); //silver; //#6A30D9;
+}
+
+.highlight {
+  color: white;
+  padding: 6px;
+  line-height: 1.3;
+   font-size: .8rem;
+  //
+}
+
+.symbols {
+  display: flex;
+}
+
+.symbol {
+  width: 25px; 
+  height: 25px; 
+  background-color: black;
+  border-radius: 5px/5px;
+  margin-left: 10px;
+}
+
+.description {
+ display: none;
+ height: 100%;
+ background-color: rgb(0, 0, 0, .70);
+}
+
+.foot {
+  text-align: center;
+  font-size: .9rem;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black; 
+  padding: 1rem .5rem;
+  margin-top: 5px;
+  height: 20%;
+  border: 1px inset white;
+  background-color: rgb(0, 0, 0, .10);
+  color: black;
+}
+
+.fine-print {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: .5rem;
+  padding: 4px 2px 2px 2px;
+  align-items: center;
+}
+
+// back 
+.inner-back {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 91%; 
+  height: 91%;
+  // linear gradient for a solid plain color
+  background-color: red;
+  border: 7px inset rgba(255,255,255,.5);
+  // box-shadow: inset 0px 0px 40px 20px rgba(0,0,0,.6);
+  background-image: url('https://hiddenpassageway.com/wp-content/uploads/2018/04/stone-texture.png');
+  // background:linear-gradient(90deg, rgba(162,255,209,1) 0%, rgba(131,255,255,1) 50%, rgba(250,176,255,1) 100%), url('https://i.pinimg.com/originals/68/dc/6b/68dc6b718f9f5bdd7bc87667586fbc7d.jpg');
+  background-blend-mode: screen;// luminosity ; //luminosity; overlay
+  background-size: cover;
+  background-repeat: no-repeat;
+}

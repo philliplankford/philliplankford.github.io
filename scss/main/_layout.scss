@@ -2,10 +2,23 @@ body {
     height: 100vh;
     width: 100%;
     padding: .5rem;
+    //color: #4B4E53;
+    //background-color: #E4A0B7;
 }
 
 h1 {
     margin: 0;
+}
+
+.project-grid {
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+}
+
+.project-card {
+    display: flex; 
+    justify-content: center;
 }
 
 .outer-wrapper {
@@ -19,7 +32,7 @@ h1 {
     flex-direction: column;
     justify-content: space-between;
     height: 400px; 
-    margin: 0 auto;
+    max-width: 315px;
     background: linear-gradient(90deg, rgba(162,255,209,1) 0%, rgba(131,255,255,1) 50%, rgba(250,176,255,1) 100%), url('https://previews.dropbox.com/p/thumb/ABMjxDWoTXqcLBJ26dQAlZ7ZrzkYNT085HTsJuP6fKHkBw1SOhc23PA0C88awbDAs35oAXg8XopgrJDapQUP6M64WmLNkHJOW3eDCu0d1eAel8p5mGGXRakhoyglcrbd5iEs-20sybX3IS0JzeIhF09vF6nC5iVaPVTRsszxqvLVmO-0009F-Y7Jvv1WVElR5LmyuWe4Gjdf0OPPWvI9F1z4-Isy_Y9AqIggGnDnjmLGO7XL5GBgklNfd1KPiHrPc7UhTdG6XUVtS9-G9bdD_k_SycF1Pmbiyav3vOmFcv6FUux4d7lsnSpTMy18S8p3G8zjJxnHetsYZYcTcBNnTAUif0CW7yNt-NWtQDA2uTPQi4f-W9pEK_bCJPc1vMlqPwu_goUxciZVEUNUZ1SimuuBobe9w24UqHaLQJU_FJQjnwzzodPfRxhPtOS0ck0jPXw/p.jpeg?fv_content=true&size_mode=5');
     background-blend-mode: overlay;
     background-size: cover;
@@ -29,6 +42,21 @@ h1 {
 
 .skills {
     color: white;
+    p {
+        font-size: .8rem;
+        font-weight: 800;
+    }
+}
+
+.skills-title {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    hr {
+        color: white;
+        width: 75%;
+    }
 }
 
 .code-pen,
@@ -44,4 +72,25 @@ h1 {
 
 .github {
     margin-top: 10px;
+}
+
+.upper-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.my-links {
+    display: flex; 
+    flex-direction: column;
+}
+
+.name-title {
+    writing-mode: vertical-rl;
+    color: rgba(255, 255, 255, .9);
+    h3 {
+        font-size: .9rem;
+    }
+    h1 {
+        font-size: 1.7rem;
+    }
 }

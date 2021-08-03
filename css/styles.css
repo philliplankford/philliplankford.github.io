@@ -354,6 +354,17 @@ h1 {
   margin: 0;
 }
 
+.project-grid {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.project-card {
+  display: flex;
+  justify-content: center;
+}
+
 .outer-wrapper {
   border: 1px solid gray;
   border-radius: 10px;
@@ -365,7 +376,7 @@ h1 {
   flex-direction: column;
   justify-content: space-between;
   height: 400px;
-  margin: 0 auto;
+  max-width: 315px;
   background: linear-gradient(90deg, #a2ffd1 0%, #83ffff 50%, #fab0ff 100%), url("https://previews.dropbox.com/p/thumb/ABMjxDWoTXqcLBJ26dQAlZ7ZrzkYNT085HTsJuP6fKHkBw1SOhc23PA0C88awbDAs35oAXg8XopgrJDapQUP6M64WmLNkHJOW3eDCu0d1eAel8p5mGGXRakhoyglcrbd5iEs-20sybX3IS0JzeIhF09vF6nC5iVaPVTRsszxqvLVmO-0009F-Y7Jvv1WVElR5LmyuWe4Gjdf0OPPWvI9F1z4-Isy_Y9AqIggGnDnjmLGO7XL5GBgklNfd1KPiHrPc7UhTdG6XUVtS9-G9bdD_k_SycF1Pmbiyav3vOmFcv6FUux4d7lsnSpTMy18S8p3G8zjJxnHetsYZYcTcBNnTAUif0CW7yNt-NWtQDA2uTPQi4f-W9pEK_bCJPc1vMlqPwu_goUxciZVEUNUZ1SimuuBobe9w24UqHaLQJU_FJQjnwzzodPfRxhPtOS0ck0jPXw/p.jpeg?fv_content=true&size_mode=5");
   background-blend-mode: overlay;
   background-size: cover;
@@ -375,6 +386,21 @@ h1 {
 
 .skills {
   color: white;
+}
+.skills p {
+  font-size: 0.8rem;
+  font-weight: 800;
+}
+
+.skills-title {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+.skills-title hr {
+  color: white;
+  width: 75%;
 }
 
 .code-pen,
@@ -393,13 +419,34 @@ h1 {
   margin-top: 10px;
 }
 
+.upper-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.my-links {
+  display: flex;
+  flex-direction: column;
+}
+
+.name-title {
+  writing-mode: vertical-rl;
+  color: rgba(255, 255, 255, 0.9);
+}
+.name-title h3 {
+  font-size: 0.9rem;
+}
+.name-title h1 {
+  font-size: 1.7rem;
+}
+
 .html-rating,
 .css-rating,
 .js-rating {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: 5px;
+  margin-top: 8px;
 }
 .html-rating p,
 .css-rating p,
@@ -462,6 +509,189 @@ h1 {
   width: 50%;
   border-radius: 20px;
   background-color: white;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+.canvas {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.base {
+  display: flex;
+  height: 350px;
+  width: 250px;
+  background-color: black;
+  border-radius: 10px/10px;
+  align-items: center;
+  justify-content: center;
+  transform-origin: center;
+  /* Card Shine
+  &:before {
+    position: absolute;
+    content: '';
+    display: inline-block;
+    top: -180px;
+    left: 0;
+    width: 30px;
+    height: 100%;
+    background-color: #fff;
+    animation: shiny-btn1 1s ease-in-out infinite;
+  }
+  @-webkit-keyframes shiny-btn1 {
+    0% { -webkit-transform: scale(0) rotate(45deg); opacity: 0; }
+    80% { -webkit-transform: scale(0) rotate(45deg); opacity: 0.5; }
+    81% { -webkit-transform: scale(4) rotate(45deg); opacity: 1; }
+    100% { -webkit-transform: scale(50) rotate(45deg); opacity: 0; }
+  }
+  */
+}
+
+.inner-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 91%;
+  height: 91%;
+  background-color: #FFFEF2;
+  border: 3px outset rgba(255, 255, 255, 0.5);
+  background-image: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/176622e8-bf4c-4d60-9a64-b75cff245c16/d3inhyi-28e16cb6-9d37-4a6e-bdc6-0d7fcf0af574.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzE3NjYyMmU4LWJmNGMtNGQ2MC05YTY0LWI3NWNmZjI0NWMxNlwvZDNpbmh5aS0yOGUxNmNiNi05ZDM3LTRhNmUtYmRjNi0wZDdmY2YwYWY1NzQucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.gqQUvb9pdKz_BDtsTqXkpM1_aUHox6IXyveVcugbntg");
+  background-blend-mode: luminosity;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 2;
+  height: 90%;
+  width: 100%;
+  padding: 0.3rem 0.9rem;
+  border-radius: 10px/10px;
+}
+
+.title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5px;
+  margin-bottom: 5px;
+  height: 30px;
+  font-size: 1.2rem;
+}
+.title svg {
+  width: 30px;
+  height: 30px;
+  transition: fill 1s;
+}
+.title svg:first-child {
+  width: 28px;
+  height: 28px;
+}
+.title svg:last-child {
+  margin-left: 5px;
+}
+.title:hover {
+  fill: white;
+}
+
+.picture {
+  display: flex;
+  border: 2px solid black;
+  height: 100%;
+  font-size: 0.8rem;
+  background-color: white;
+  box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.7);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-blend-mode: overlay;
+}
+.picture:hover .description {
+  display: block;
+}
+
+.stars {
+  padding: 4px 10px;
+  display: flex;
+  justify-content: center;
+  margin: 10px 0px 5px;
+  border: 1px outset white;
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+.star {
+  fill: black;
+}
+
+.highlight {
+  color: white;
+  padding: 6px;
+  line-height: 1.3;
+  font-size: 0.8rem;
+}
+
+.symbols {
+  display: flex;
+}
+
+.symbol {
+  width: 25px;
+  height: 25px;
+  background-color: black;
+  border-radius: 5px/5px;
+  margin-left: 10px;
+}
+
+.description {
+  display: none;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.foot {
+  text-align: center;
+  font-size: 0.9rem;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+  padding: 1rem 0.5rem;
+  margin-top: 5px;
+  height: 20%;
+  border: 1px inset white;
+  background-color: rgba(0, 0, 0, 0.1);
+  color: black;
+}
+
+.fine-print {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 0.5rem;
+  padding: 4px 2px 2px 2px;
+  align-items: center;
+}
+
+.inner-back {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 91%;
+  height: 91%;
+  background-color: red;
+  border: 7px inset rgba(255, 255, 255, 0.5);
+  background-image: url("https://hiddenpassageway.com/wp-content/uploads/2018/04/stone-texture.png");
+  background-blend-mode: screen;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 /*# sourceMappingURL=styles.css.map */
