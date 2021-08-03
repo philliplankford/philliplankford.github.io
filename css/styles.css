@@ -348,6 +348,7 @@ body {
   height: 100vh;
   width: 100%;
   padding: 0.5rem;
+  background-color: #4B4E53;
 }
 
 h1 {
@@ -366,9 +367,28 @@ h1 {
 }
 
 .outer-wrapper {
-  border: 1px solid gray;
+  border: 1px solid black;
   border-radius: 10px;
   padding: 5px;
+}
+
+.site-nav ul {
+  text-decoration: none;
+  list-style: none;
+  display: flex;
+  font-size: 0.7rem;
+  justify-content: space-evenly;
+  margin: 10px 0px;
+}
+.site-nav ul li {
+  padding: 7px;
+  background-color: #fab0ff;
+  box-shadow: -4px 4px 0 0px #83ffff;
+  color: #4B4E53;
+  font-weight: 600;
+}
+.site-nav ul li:hover {
+  color: white;
 }
 
 .my-card {
@@ -376,7 +396,6 @@ h1 {
   flex-direction: column;
   justify-content: space-between;
   height: 400px;
-  max-width: 315px;
   background: linear-gradient(90deg, #a2ffd1 0%, #83ffff 50%, #fab0ff 100%), url("https://previews.dropbox.com/p/thumb/ABMjxDWoTXqcLBJ26dQAlZ7ZrzkYNT085HTsJuP6fKHkBw1SOhc23PA0C88awbDAs35oAXg8XopgrJDapQUP6M64WmLNkHJOW3eDCu0d1eAel8p5mGGXRakhoyglcrbd5iEs-20sybX3IS0JzeIhF09vF6nC5iVaPVTRsszxqvLVmO-0009F-Y7Jvv1WVElR5LmyuWe4Gjdf0OPPWvI9F1z4-Isy_Y9AqIggGnDnjmLGO7XL5GBgklNfd1KPiHrPc7UhTdG6XUVtS9-G9bdD_k_SycF1Pmbiyav3vOmFcv6FUux4d7lsnSpTMy18S8p3G8zjJxnHetsYZYcTcBNnTAUif0CW7yNt-NWtQDA2uTPQi4f-W9pEK_bCJPc1vMlqPwu_goUxciZVEUNUZ1SimuuBobe9w24UqHaLQJU_FJQjnwzzodPfRxhPtOS0ck0jPXw/p.jpeg?fv_content=true&size_mode=5");
   background-blend-mode: overlay;
   background-size: cover;
@@ -458,7 +477,7 @@ h1 {
   position: relative;
   width: 100%;
   height: 10px;
-  background-color: gray;
+  background-color: #4B4E53;
   border-radius: 20px;
 }
 
@@ -477,7 +496,7 @@ h1 {
   position: relative;
   width: 100%;
   height: 10px;
-  background-color: gray;
+  background-color: #4B4E53;
   border-radius: 20px;
 }
 
@@ -496,7 +515,7 @@ h1 {
   position: relative;
   width: 100%;
   height: 10px;
-  background-color: gray;
+  background-color: #4B4E53;
   border-radius: 20px;
 }
 
@@ -564,7 +583,7 @@ h1 {
   height: 91%;
   background-color: #FFFEF2;
   border: 3px outset rgba(255, 255, 255, 0.5);
-  background-image: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/176622e8-bf4c-4d60-9a64-b75cff245c16/d3inhyi-28e16cb6-9d37-4a6e-bdc6-0d7fcf0af574.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzE3NjYyMmU4LWJmNGMtNGQ2MC05YTY0LWI3NWNmZjI0NWMxNlwvZDNpbmh5aS0yOGUxNmNiNi05ZDM3LTRhNmUtYmRjNi0wZDdmY2YwYWY1NzQucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.gqQUvb9pdKz_BDtsTqXkpM1_aUHox6IXyveVcugbntg");
+  background: linear-gradient(90deg, #a2ffd1 0%, #83ffff 50%, #fab0ff 100%), url("https://i.pinimg.com/originals/68/dc/6b/68dc6b718f9f5bdd7bc87667586fbc7d.jpg");
   background-blend-mode: luminosity;
   background-size: cover;
   background-repeat: no-repeat;
@@ -678,6 +697,10 @@ h1 {
   font-size: 0.5rem;
   padding: 4px 2px 2px 2px;
   align-items: center;
+}
+
+.inset-text {
+  font-size: 0.9rem;
 }
 
 .inner-back {

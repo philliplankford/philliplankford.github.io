@@ -3,7 +3,7 @@ body {
     width: 100%;
     padding: .5rem;
     //color: #4B4E53;
-    //background-color: #E4A0B7;
+    background-color: #4B4E53;// #E4A0B7;
 }
 
 h1 {
@@ -22,9 +22,46 @@ h1 {
 }
 
 .outer-wrapper {
-    border: 1px solid gray;
+    border: 1px solid black;
     border-radius: 10px;
     padding: 5px;
+}
+
+.site-nav {
+    ul {
+        text-decoration: none;
+        list-style: none;
+        display: flex;
+        font-size: .7rem;
+        justify-content: space-evenly;
+        margin: 10px 0px;
+        li {
+            padding: 7px; 
+            background-color: rgba(250,176,255,1) ; //#E18AAA
+            box-shadow: -4px 4px 0 0px rgba(131,255,255,1) ;
+            color: #4B4E53;
+            font-weight: 600;
+            &:hover {
+                color: white;
+            }
+        }
+        // li {
+        //     position: relative;
+        // }
+        // li:before{
+        //     content:" ";
+        //     width: 0;
+        //     height: 0;
+        //     border-left: 5px solid transparent;
+        //     border-right: 5px solid transparent;
+        //     border-bottom: 10px solid #E4A0B7;
+        //     position:absolute;
+        //     left: -15px;
+        //     // top:5px;
+        //     margin-left:10px;
+        //     z-index: -99;
+        // }
+    }
 }
 
 .my-card {
@@ -32,7 +69,7 @@ h1 {
     flex-direction: column;
     justify-content: space-between;
     height: 400px; 
-    max-width: 315px;
+    // max-width: 315px;
     background: linear-gradient(90deg, rgba(162,255,209,1) 0%, rgba(131,255,255,1) 50%, rgba(250,176,255,1) 100%), url('https://previews.dropbox.com/p/thumb/ABMjxDWoTXqcLBJ26dQAlZ7ZrzkYNT085HTsJuP6fKHkBw1SOhc23PA0C88awbDAs35oAXg8XopgrJDapQUP6M64WmLNkHJOW3eDCu0d1eAel8p5mGGXRakhoyglcrbd5iEs-20sybX3IS0JzeIhF09vF6nC5iVaPVTRsszxqvLVmO-0009F-Y7Jvv1WVElR5LmyuWe4Gjdf0OPPWvI9F1z4-Isy_Y9AqIggGnDnjmLGO7XL5GBgklNfd1KPiHrPc7UhTdG6XUVtS9-G9bdD_k_SycF1Pmbiyav3vOmFcv6FUux4d7lsnSpTMy18S8p3G8zjJxnHetsYZYcTcBNnTAUif0CW7yNt-NWtQDA2uTPQi4f-W9pEK_bCJPc1vMlqPwu_goUxciZVEUNUZ1SimuuBobe9w24UqHaLQJU_FJQjnwzzodPfRxhPtOS0ck0jPXw/p.jpeg?fv_content=true&size_mode=5');
     background-blend-mode: overlay;
     background-size: cover;

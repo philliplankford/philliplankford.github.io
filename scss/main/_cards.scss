@@ -67,8 +67,8 @@ $col-mythic: lighten(#673ab7, 10%);
   // linear gradient for a solid plain color
   background-color: $col-common;
   border: 3px outset rgba(255,255,255,.5);
-  background-image: url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/176622e8-bf4c-4d60-9a64-b75cff245c16/d3inhyi-28e16cb6-9d37-4a6e-bdc6-0d7fcf0af574.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzE3NjYyMmU4LWJmNGMtNGQ2MC05YTY0LWI3NWNmZjI0NWMxNlwvZDNpbmh5aS0yOGUxNmNiNi05ZDM3LTRhNmUtYmRjNi0wZDdmY2YwYWY1NzQucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.gqQUvb9pdKz_BDtsTqXkpM1_aUHox6IXyveVcugbntg');
-  // background:linear-gradient(90deg, rgba(162,255,209,1) 0%, rgba(131,255,255,1) 50%, rgba(250,176,255,1) 100%), url('https://i.pinimg.com/originals/68/dc/6b/68dc6b718f9f5bdd7bc87667586fbc7d.jpg');
+  //background-image: url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/176622e8-bf4c-4d60-9a64-b75cff245c16/d3inhyi-28e16cb6-9d37-4a6e-bdc6-0d7fcf0af574.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzE3NjYyMmU4LWJmNGMtNGQ2MC05YTY0LWI3NWNmZjI0NWMxNlwvZDNpbmh5aS0yOGUxNmNiNi05ZDM3LTRhNmUtYmRjNi0wZDdmY2YwYWY1NzQucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.gqQUvb9pdKz_BDtsTqXkpM1_aUHox6IXyveVcugbntg');
+  background:linear-gradient(90deg, rgba(162,255,209,1) 0%, rgba(131,255,255,1) 50%, rgba(250,176,255,1) 100%), url('https://i.pinimg.com/originals/68/dc/6b/68dc6b718f9f5bdd7bc87667586fbc7d.jpg');
   background-blend-mode: luminosity;// luminosity ; //luminosity; overlay
   background-size: cover;
   background-repeat: no-repeat;
@@ -187,6 +187,10 @@ $col-mythic: lighten(#673ab7, 10%);
   font-size: .5rem;
   padding: 4px 2px 2px 2px;
   align-items: center;
+}
+
+.inset-text {
+    font-size:  .9rem;
 }
 
 // back 
