@@ -360,15 +360,34 @@ h1 {
   max-width: 100%;
   margin: 0 auto;
   grid-template-columns: auto;
+  grid-gap: 15px 15px;
 }
 
 .project {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   border: 2px solid black;
   border-radius: 10px;
-  padding: 20px;
+  padding: 20px 10px;
+  position: relative;
+  overflow: hidden;
+  color: white;
+}
+
+.title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+.title hr {
+  width: 100%;
+}
+
+.header {
+  border-left: 100px solid orange;
+  margin: 20px 0;
 }
 
 .project-card {
@@ -411,6 +430,14 @@ h1 {
   background-size: cover;
   border-radius: 10px;
   padding: 10px;
+  position: relative;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-right: 20px;
 }
 
 .skills {
@@ -433,18 +460,24 @@ h1 {
 }
 
 .code-pen,
-.github {
+.github,
+.twitter,
+.linkedin {
   width: 35px;
   height: 35px;
   fill: rgba(255, 255, 255, 0.7);
   transition: fill 0.5s linear;
 }
 .code-pen:hover,
-.github:hover {
+.github:hover,
+.twitter:hover,
+.linkedin:hover {
   fill: white;
 }
 
-.github {
+.github,
+.twitter,
+.linkedin {
   margin-top: 10px;
 }
 
@@ -563,7 +596,7 @@ h1 {
   height: 100px;
   transform-style: preserve-3d;
   transform: rotateX(-30deg) rotateY(-40deg);
-  margin: 30px auto;
+  margin: 20px auto 40px;
   animation: cube-rotate 30s infinite;
 }
 
@@ -583,6 +616,16 @@ h1 {
   background-blend-mode: hard-light;
   opacity: 1;
 }
+.inner-face:before {
+  content: "";
+  position: absolute;
+  border: 2px solid #4B4E53;
+  height: 100%;
+  width: 100%;
+  top: -2px;
+  left: -2px;
+  border-radius: 15%;
+}
 
 .cube-face {
   position: absolute;
@@ -591,6 +634,16 @@ h1 {
   width: 100%;
   height: 100%;
   border: 2px solid #7df9ff;
+}
+.cube-face:before {
+  content: "";
+  position: absolute;
+  border: 2px solid #4B4E53;
+  height: 100%;
+  width: 100%;
+  top: -2px;
+  left: -2px;
+  border-radius: 15%;
 }
 
 .inner-image {
