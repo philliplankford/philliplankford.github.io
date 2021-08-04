@@ -356,9 +356,19 @@ h1 {
 }
 
 .project-grid {
+  display: grid;
+  max-width: 100%;
+  margin: 0 auto;
+  grid-template-columns: auto;
+}
+
+.project {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  border: 2px solid black;
+  border-radius: 10px;
+  padding: 20px;
 }
 
 .project-card {
@@ -530,191 +540,117 @@ h1 {
   background-color: white;
 }
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-family: "Roboto Condensed", sans-serif;
+.project-grid {
+  perspective: 1500px;
 }
 
-.canvas {
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.project-grid * {
+  transform-style: preserve-3d;
 }
 
-.base {
-  display: flex;
-  height: 350px;
-  width: 250px;
-  background-color: black;
-  border-radius: 10px/10px;
-  align-items: center;
-  justify-content: center;
-  transform-origin: center;
-  /* Card Shine
-  &:before {
-    position: absolute;
-    content: '';
-    display: inline-block;
-    top: -180px;
-    left: 0;
-    width: 30px;
-    height: 100%;
-    background-color: #fff;
-    animation: shiny-btn1 1s ease-in-out infinite;
+@keyframes cube-rotate {
+  50% {
+    transform: rotateX(360deg) rotateY(360deg);
   }
-  @-webkit-keyframes shiny-btn1 {
-    0% { -webkit-transform: scale(0) rotate(45deg); opacity: 0; }
-    80% { -webkit-transform: scale(0) rotate(45deg); opacity: 0.5; }
-    81% { -webkit-transform: scale(4) rotate(45deg); opacity: 1; }
-    100% { -webkit-transform: scale(50) rotate(45deg); opacity: 0; }
+  100% {
+    transform: rotateX(-20deg) rotateY(-30deg);
   }
-  */
+}
+.cube {
+  display: flex;
+  position: relative;
+  width: 100px;
+  height: 100px;
+  transform-style: preserve-3d;
+  transform: rotateX(-30deg) rotateY(-40deg);
+  margin: 30px auto;
+  animation: cube-rotate 30s infinite;
 }
 
-.inner-card {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 91%;
-  height: 91%;
-  background-color: #FFFEF2;
-  border: 3px outset rgba(255, 255, 255, 0.5);
-  background: linear-gradient(90deg, #a2ffd1 0%, #83ffff 50%, #fab0ff 100%), url("https://i.pinimg.com/originals/68/dc/6b/68dc6b718f9f5bdd7bc87667586fbc7d.jpg");
-  background-blend-mode: luminosity;
+.cube:hover {
+  animation: cube-rotate 10s infinite;
+}
+
+.inner-face {
+  position: absolute;
+  top: 25%;
+  left: 25%;
+  width: 50%;
+  height: 50%;
+  border: 2px solid rgba(125, 249, 255, 0.5);
+  background: #7df9ff no-repeat url("https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg");
   background-size: cover;
-  background-repeat: no-repeat;
+  background-blend-mode: hard-light;
+  opacity: 1;
 }
 
-.content {
-  display: flex;
-  flex-direction: column;
-  flex-grow: 2;
-  height: 90%;
+.cube-face {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  padding: 0.3rem 0.9rem;
-  border-radius: 10px/10px;
-}
-
-.title {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 5px;
-  margin-bottom: 5px;
-  height: 30px;
-  font-size: 1.2rem;
-}
-.title svg {
-  width: 30px;
-  height: 30px;
-  transition: fill 1s;
-}
-.title svg:first-child {
-  width: 28px;
-  height: 28px;
-}
-.title svg:last-child {
-  margin-left: 5px;
-}
-.title:hover {
-  fill: white;
-}
-
-.picture {
-  display: flex;
-  border: 2px solid black;
   height: 100%;
-  font-size: 0.8rem;
-  background-color: white;
-  box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.7);
-  background-size: 100%;
-  background-repeat: no-repeat;
-  background-blend-mode: overlay;
-}
-.picture:hover .description {
-  display: block;
+  border: 2px solid #7df9ff;
 }
 
-.stars {
-  padding: 4px 10px;
-  display: flex;
-  justify-content: center;
-  margin: 10px 0px 5px;
-  border: 1px outset white;
-  background-color: rgba(255, 255, 255, 0.4);
-}
-
-.star {
-  fill: black;
-}
-
-.highlight {
-  color: white;
-  padding: 6px;
-  line-height: 1.3;
-  font-size: 0.8rem;
-}
-
-.symbols {
-  display: flex;
-}
-
-.symbol {
-  width: 25px;
-  height: 25px;
-  background-color: black;
-  border-radius: 5px/5px;
-  margin-left: 10px;
-}
-
-.description {
-  display: none;
+.inner-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.7);
+  transform-style: preserve-3d;
+  background: no-repeat url("https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg");
 }
 
-.foot {
-  text-align: center;
-  font-size: 0.9rem;
-  border-top: 2px solid black;
-  border-bottom: 2px solid black;
-  padding: 1rem 0.5rem;
-  margin-top: 5px;
-  height: 20%;
-  border: 1px inset white;
-  background-color: rgba(0, 0, 0, 0.1);
-  color: black;
+.cube-front {
+  transform: translateZ(50px);
 }
 
-.fine-print {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  font-size: 0.5rem;
-  padding: 4px 2px 2px 2px;
-  align-items: center;
+.cube-back {
+  transform: rotateY(180deg) translateZ(50px);
 }
 
-.inset-text {
-  font-size: 0.9rem;
+.cube-bottom {
+  transform: rotateX(-90deg) translateZ(50px);
+}
+
+.cube-top {
+  transform: rotateX(90deg) translateZ(50px);
+}
+
+.cube-left {
+  transform: rotateY(-90deg) translateZ(50px);
+}
+
+.cube-right {
+  transform: rotateY(90deg) translateZ(50px);
+}
+
+.inner-front {
+  transform: translateZ(25px);
 }
 
 .inner-back {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 91%;
-  height: 91%;
-  background-color: red;
-  border: 7px inset rgba(255, 255, 255, 0.5);
-  background-image: url("https://hiddenpassageway.com/wp-content/uploads/2018/04/stone-texture.png");
-  background-blend-mode: screen;
-  background-size: cover;
-  background-repeat: no-repeat;
+  transform: rotateY(180deg) translateZ(25px);
+}
+
+.inner-bottom {
+  transform: rotateX(-90deg) translateZ(25px);
+}
+
+.inner-top {
+  transform: rotateX(90deg) translateZ(25px);
+}
+
+.inner-left {
+  transform: rotateY(-90deg) translateZ(25px);
+}
+
+.inner-right {
+  transform: rotateY(90deg) translateZ(25px);
 }
 
 /*# sourceMappingURL=styles.css.map */
