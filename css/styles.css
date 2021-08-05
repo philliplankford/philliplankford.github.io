@@ -345,7 +345,6 @@ template {
 }
 
 body {
-  height: 100vh;
   width: 100vw;
   padding: 0.5rem;
   background-color: #2f2f2f;
@@ -407,6 +406,10 @@ h1 {
 .outer-wrapper {
   border: 1px solid black;
   padding: 5px;
+}
+
+.show-lg {
+  display: none;
 }
 
 .site-nav ul {
@@ -528,18 +531,33 @@ h1 {
   }
   .site-nav ul .home {
     margin: 0;
+    margin-right: 10px;
+  }
+
+  .lg-nav {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .archive-nav {
+    margin-right: 10px;
+  }
+
+  .hide-lg {
+    display: none;
   }
 
   .header {
     grid-area: showcase;
     margin-top: 1px;
-    margin-bottom: 30px;
+    margin-bottom: 0px;
   }
 
   .project-grid {
     grid-area: projects;
+    height: 100vh;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 50% 50%;
     margin: 0;
   }
 
@@ -560,13 +578,22 @@ h1 {
   .site-grid {
     display: grid;
     grid-template-columns: 200px 1fr;
-    grid-template-rows: 50px 1fr;
+    grid-template-rows: 20px 25px 1fr;
     grid-column-gap: 10px;
-    grid-template-areas: "personal-card showcase" "personal-card projects";
+    grid-row-gap: 10px;
+    grid-template-areas: "personal-card showcase" "personal-card site-nav" "personal-card projects";
   }
 
   .my-card {
     height: 100%;
+  }
+
+  .show-lg {
+    display: flex;
+    grid-area: site-nav;
+  }
+  .show-lg ul {
+    justify-content: space-between;
   }
 }
 .html-rating,

@@ -5,6 +5,7 @@ $cube-tranZ: math.div($cube-dim, 2) + 3;
 $inner-cube-tranZ: math.div($cube-tranZ, 2);
 
 .project-grid {
+  // position: relative; //get rid of this to snap to grid
     // height: 100vh;
     // perspective: 1500px;
     // background: #4B4E53;;
@@ -89,6 +90,10 @@ $inner-cube-tranZ: math.div($cube-tranZ, 2);
       }
   }
   
+  .project {
+    //position: absolute; //get rid of this to snap to grid
+  }
+
   .inner-image {
     position: absolute;
     top: 0; 
@@ -185,6 +190,14 @@ $inner-cube-tranZ: math.div($cube-tranZ, 2);
   }
 
   @media screen and (min-width: 1024px) {
+
+    // .project-grid{
+    //   position: relative;
+    // }
+    // .project {
+    //   position: absolute;
+    // }
+    
     $cube-dim: $cube-dim - 30px; 
     .cube {
         width: $cube-dim;
