@@ -1,14 +1,14 @@
 @use 'sass:math';
 
-$cube-dim: 100px; 
+$cube-dim: 190px; 
 
-$cube-tranZ: math.div($cube-dim, 2);
+$cube-tranZ: math.div($cube-dim, 2) + 3;
 
 $inner-cube-tranZ: math.div($cube-tranZ, 2);
 
 .project-grid {
     // height: 100vh;
-    perspective: 1500px;
+    // perspective: 1500px;
     // background: #4B4E53;;
   }
   
@@ -20,13 +20,19 @@ $inner-cube-tranZ: math.div($cube-tranZ, 2);
   
   @keyframes cube-rotate{
     50% {
-          transform: rotateX(360deg) rotateY(360deg);
+          transform: rotateX(30deg) rotateY(20deg);
     }
     100% {
-      transform: rotateX(-20deg) rotateY(-30deg);
+      transform: rotateX(-30deg) rotateY(-40deg);
     }
   }
   
+  @keyframes cube-grow {
+    50% {
+      width: $cube-dim + 10px; 
+      height: $cube-dim + 10px;
+    }
+  }
   .cube {
     display: flex;
     position: relative;
@@ -34,15 +40,11 @@ $inner-cube-tranZ: math.div($cube-tranZ, 2);
     height: $cube-dim;
     transform-style: preserve-3d;
     transform: rotateX(-30deg) rotateY(-40deg);
-    margin: 20px auto 40px;
+    margin: 40px auto 60px;
     // transition: transform 10s linear;
-    animation: cube-rotate 30s infinite;
+    animation: cube-rotate 30s infinite; //, cube-grow 10s infinite;
     }
-  
-  .cube:hover {
-    animation: cube-rotate 10s infinite;
-  }
-  
+
   .inner-face {
       position: absolute;
       top: 25%;
@@ -50,9 +52,9 @@ $inner-cube-tranZ: math.div($cube-tranZ, 2);
       width: 50%;
       height: 50%;
       border: 2px solid rgba(125, 249, 255, .5);
-        background: rgba(125, 249, 255, 1) no-repeat url("https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg");
-      background-size: cover;
-      background-blend-mode: hard-light;
+        // background: rgba(125, 249, 255, 1) no-repeat url("https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg");
+      // background-size: cover;
+      // background-blend-mode: hard-light;
       opacity: 1;
       &:before {
         content:'';
@@ -68,6 +70,8 @@ $inner-cube-tranZ: math.div($cube-tranZ, 2);
   
   .cube-face {
       position: absolute;
+      display: flex; 
+      // align-items: flex-end;
       top: 0;
       left: 0;
       width: 100%;
@@ -98,7 +102,39 @@ $inner-cube-tranZ: math.div($cube-tranZ, 2);
       transform-style: preserve-3d;
       background: no-repeat url("https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg");
   }
+
+  .project-button {
+    width: 100%;
+    background: none;
+    border: 2px solid;
+    line-height: 1;
+    margin: 0.5em;
+    padding: 1em 2em;
+    color: $col-primary;
+    transition: border-color 0.25s, box-shadow 0.25s, color 0.25s;
+    box-shadow: 
+    0.3em 0.3em 0 0 $col-highlight,
+    inset 0.3em 0.3em 0 0 $col-highlight;
+    
+    &:hover,
+    &:focus { 
+      border-color: $col-primary;
+      color: white;
+      box-shadow: 
+      0 0 0 0 $col-primary,
+      inset 6em 11em 0 0 $col-primary;
+    }
+  }
+
+  .project-year {
+    padding: 5px;
+  }
   
+  .cube-tags {
+    list-style: none;
+    padding: 5px;
+    // text-align: right;
+  }
   
   .cube-front {
       transform: translateZ($cube-tranZ);
