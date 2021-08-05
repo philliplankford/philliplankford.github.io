@@ -1,7 +1,5 @@
 @use 'sass:math';
 
-$cube-dim: 190px; 
-
 $cube-tranZ: math.div($cube-dim, 2) + 3;
 
 $inner-cube-tranZ: math.div($cube-tranZ, 2);
@@ -184,4 +182,38 @@ $inner-cube-tranZ: math.div($cube-tranZ, 2);
   
   .inner-right {
       transform: rotateY(90deg) translateZ($inner-cube-tranZ);
+  }
+
+  @media screen and (min-width: 1024px) {
+    $cube-dim: $cube-dim - 30px; 
+    .cube {
+        width: $cube-dim;
+        height: $cube-dim;
+    }
+    $cube-tranZ: math.div($cube-dim, 2) + 3;
+      
+    .cube-front {
+      transform: translateZ($cube-tranZ);
+  }
+
+  .cube-back {
+      transform: rotateY(180deg) translateZ($cube-tranZ);
+  }
+
+  .cube-bottom {
+      transform: rotateX(-90deg) translateZ($cube-tranZ);
+  }
+
+  .cube-top {
+      transform: rotateX(90deg) translateZ($cube-tranZ);
+  }
+
+  .cube-left {
+      transform: rotateY(-90deg) translateZ($cube-tranZ);
+  }
+
+  .cube-right {
+      transform: rotateY(90deg) translateZ($cube-tranZ);
+
+  }
   }

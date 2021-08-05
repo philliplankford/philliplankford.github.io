@@ -9,6 +9,17 @@ h1 {
     margin: 0;
 }
 
+.about {
+    color: black;
+    margin: 20px 50px; 
+    // text-align: center;
+    //margin: 10px;
+    p {
+        background-color: rgba(255, 255, 255, 1);
+        margin-bottom: 5px;
+    }
+}
+
 .project-grid {
     display: grid; 
     max-width: 100%;
@@ -22,7 +33,7 @@ h1 {
     flex-direction: column;
     align-items: center;
     // border: 1px solid black; 
-    border-radius: 10px;
+    // border-radius: 10px;
     padding: 20px 10px;
     position: relative;
     //overflow: hidden;
@@ -53,9 +64,9 @@ h1 {
 }
 
 .outer-wrapper {
-    height: 100%;
+    //height: 100vh;
     border: 1px solid $col-outlines;
-    border-radius: 10px;
+    // border-radius: 10px;
     padding: 5px;
 }
 
@@ -96,7 +107,7 @@ h1 {
     background: linear-gradient(90deg, rgba(162,255,209,1) 0%, rgba(131,255,255,1) 50%, rgba(250,176,255,1) 100%), url('https://previews.dropbox.com/p/thumb/ABMjxDWoTXqcLBJ26dQAlZ7ZrzkYNT085HTsJuP6fKHkBw1SOhc23PA0C88awbDAs35oAXg8XopgrJDapQUP6M64WmLNkHJOW3eDCu0d1eAel8p5mGGXRakhoyglcrbd5iEs-20sybX3IS0JzeIhF09vF6nC5iVaPVTRsszxqvLVmO-0009F-Y7Jvv1WVElR5LmyuWe4Gjdf0OPPWvI9F1z4-Isy_Y9AqIggGnDnjmLGO7XL5GBgklNfd1KPiHrPc7UhTdG6XUVtS9-G9bdD_k_SycF1Pmbiyav3vOmFcv6FUux4d7lsnSpTMy18S8p3G8zjJxnHetsYZYcTcBNnTAUif0CW7yNt-NWtQDA2uTPQi4f-W9pEK_bCJPc1vMlqPwu_goUxciZVEUNUZ1SimuuBobe9w24UqHaLQJU_FJQjnwzzodPfRxhPtOS0ck0jPXw/p.jpeg?fv_content=true&size_mode=5');
     background-blend-mode: overlay;
     background-size: cover;
-    border-radius: 10px;
+    //border-radius: 10px;
     padding: 10px;
     position: relative; 
 }
@@ -166,4 +177,71 @@ h1 {
     h1 {
         font-size: 1.7rem;
     }
+}
+
+@media screen and (min-width: 768px) {
+    .project-grid {
+        display: grid; 
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .my-card {
+        grid-area: personal-card;
+    }
+
+    .site-nav {
+        justify-content: space-between;
+ 
+        ul {
+            //height: 100%;
+            //align-items: center;
+            .home {
+                margin: 0;
+            }
+        }
+    }
+
+    .header {
+        grid-area: showcase;
+        margin-top: 1px;
+        margin-bottom: 30px;
+    }
+    
+    .project-grid {
+        grid-area: projects;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 1fr 1fr;
+        margin: 0;
+    }
+
+    .showcase-two {
+        grid-row-start: 2;
+        grid-column-start: 2;
+    }
+
+    .showcase-three {
+        grid-column-start: 3;
+    }
+
+    .showcase-four {
+        grid-row-start: 2;
+        grid-column-start: 4;
+    }
+
+    .site-grid {
+        display: grid; 
+        grid-template-columns: 200px 1fr;
+        grid-template-rows: 50px 1fr;
+        grid-column-gap: 10px;
+        grid-template-areas: 
+        "personal-card showcase"
+        "personal-card projects";
+    }
+
+    .my-card {
+        height: 100%;
+    }
+
 }
