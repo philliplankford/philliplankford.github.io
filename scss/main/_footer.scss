@@ -1,0 +1,49 @@
+footer {
+    display: flex; 
+    flex-direction: row;
+    width: 100%;
+    justify-content: flex-end;
+    margin-top: 20px;
+    // margin-bottom: 100px;
+}
+
+.color-block {
+    display: flex;
+    width: 20%;
+    height: 20px;
+    //border: 5px solid lighten($col-outlines, 15%);
+    // background-color: $col-primary;
+}
+
+.block {
+    width: 100px;
+    height: 100%;
+}
+
+.block-one {
+    background-color: $col-accent;
+    width: 10px;
+}
+
+.block-two {
+    background-color: $col-highlight;
+    width: 50px;
+}
+
+.block-three {
+    background-color: $col-primary;
+}
+
+.block-four {
+    background-color: $col-outlines;
+    width: 25px;
+}
+
+.block-five {
+    background-color: $col-background;
+}
+
+.block-six {
+    background-color: $col-text;
+    width: 25px;
+}

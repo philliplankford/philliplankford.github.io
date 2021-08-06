@@ -7,11 +7,20 @@ body {
 
 h1 {
     margin: 0;
+    // letter-spacing: .5rem;
+}
+
+h2 {
+    font-size: 1rem;
+}
+
+h3 {
+    letter-spacing: 1.2rem;
 }
 
 a {
     text-decoration: none;
-    color: white;
+    color: white; //white
 }
 
 .project-grid {
@@ -75,6 +84,9 @@ a {
         display: flex;
         font-size: .7rem;
         justify-content: space-between;
+        a:hover {
+            color: black;
+        }
         li {
             padding: 7px; 
             // margin-right: 10px;

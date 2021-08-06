@@ -355,6 +355,14 @@ h1 {
   margin: 0;
 }
 
+h2 {
+  font-size: 1rem;
+}
+
+h3 {
+  letter-spacing: 1.2rem;
+}
+
 a {
   text-decoration: none;
   color: white;
@@ -415,6 +423,9 @@ a {
   display: flex;
   font-size: 0.7rem;
   justify-content: space-between;
+}
+.site-nav ul a:hover {
+  color: black;
 }
 .site-nav ul li {
   padding: 7px;
@@ -869,6 +880,7 @@ svg:hover {
 }
 .project-details h3 {
   margin-bottom: 5px;
+  letter-spacing: normal;
 }
 .project-details p {
   margin-bottom: 5px;
@@ -1138,6 +1150,53 @@ svg:hover {
 .contact-info h3:hover:after {
   left: 0;
   width: 100%;
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+
+.color-block {
+  display: flex;
+  width: 20%;
+  height: 20px;
+}
+
+.block {
+  width: 100px;
+  height: 100%;
+}
+
+.block-one {
+  background-color: #a2ffd1;
+  width: 10px;
+}
+
+.block-two {
+  background-color: #83ffff;
+  width: 50px;
+}
+
+.block-three {
+  background-color: #fab0ff;
+}
+
+.block-four {
+  background-color: #404040;
+  width: 25px;
+}
+
+.block-five {
+  background-color: #121212;
+}
+
+.block-six {
+  background-color: white;
+  width: 25px;
 }
 
 /*# sourceMappingURL=styles.css.map */
