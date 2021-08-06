@@ -137,10 +137,7 @@ a {
     }
 }
 
-.code-pen,
-.github,
-.twitter,
-.linkedin {
+svg {
     width: 35px;
     height: 35px;
     fill: rgba(255, 255, 255, .7);
@@ -182,7 +179,7 @@ a {
     .project-grid {
         display: grid; 
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: 400px 400px;
+        grid-template-rows: 1fr 1fr;//400px 400px;
         // height: 100vh;
     }
 }

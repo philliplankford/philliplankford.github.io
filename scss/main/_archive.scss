@@ -17,6 +17,7 @@
     width: 100%; 
     justify-content: center;
     transition: width 10s ease-in-out;
+    // border-bottom: 1px solid white;
 }
 
 .project-details {
@@ -24,6 +25,12 @@
     flex-direction: column;
     margin-left: 50px;
     flex-basis: 50%;
+    h3 {
+        margin-bottom: 5px;  
+    }
+    p {
+        margin-bottom: 5px;
+    }
 }
 
 .site-buttons {

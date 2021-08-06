@@ -469,19 +469,13 @@ a {
   width: 75%;
 }
 
-.code-pen,
-.github,
-.twitter,
-.linkedin {
+svg {
   width: 35px;
   height: 35px;
   fill: rgba(255, 255, 255, 0.7);
   transition: fill 0.5s linear;
 }
-.code-pen:hover,
-.github:hover,
-.twitter:hover,
-.linkedin:hover {
+svg:hover {
   fill: white;
 }
 
@@ -516,7 +510,7 @@ a {
   .project-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 400px 400px;
+    grid-template-rows: 1fr 1fr;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -873,6 +867,12 @@ a {
   margin-left: 50px;
   flex-basis: 50%;
 }
+.project-details h3 {
+  margin-bottom: 5px;
+}
+.project-details p {
+  margin-bottom: 5px;
+}
 
 .site-buttons {
   display: flex;
@@ -949,6 +949,10 @@ a {
   transform-style: preserve-3d;
   transform: rotateX(-30deg) rotateY(-40deg);
   margin: 40px 0px 60px;
+}
+
+.rotate {
+  animation: cube-rotate 30s infinite;
 }
 
 .archive-inner-face {

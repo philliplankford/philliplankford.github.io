@@ -17,6 +17,10 @@ $archive-cube-inner-tranZ: math.div($archive-cube-tranZ, 2);
     // animation: cube-rotate 30s infinite; //, cube-grow 10s infinite;
     }
 
+    .rotate {
+        animation: cube-rotate 30s infinite; 
+    }
+
   .archive-inner-face {
       position: absolute;
       top: 25%;
