@@ -1,0 +1,61 @@
+.archive-grid {
+    display: grid; 
+    height: 100vh;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 200px);
+    grid-gap: 20px 20px;
+    padding: 10px;
+    justify-items: center;
+}
+
+.selected {
+    grid-column-start: span 3;
+    display: flex;
+    align-items: center;
+    color: white;
+    max-height: 200px;
+}
+
+.project-details {
+    display: flex; 
+    flex-direction: column;
+    margin-left: 20px;
+    flex-basis: 50%;
+}
+
+.site-buttons {
+    display: flex; 
+    flex-direction: column;
+    // align-items: center;
+    justify-content: space-between;
+}
+
+.hide {
+    display: none;
+}
+
+.archive-face {
+    position: relative;
+    display: flex; 
+    //flex-basis: 50%;
+    // align-items: flex-end;
+    top: 0;
+    left: 0;
+    width: $cube-dim;
+    height: $cube-dim;
+    border: 2px solid rgba(125, 249, 255, 1);
+    // background-color: rgba(255, 255, 255, 0.1);
+    ///filter: blur(2px);
+    &:before {
+        content:'';
+        position: absolute;
+        border: 2px solid #4B4E53;
+        width: $cube-dim;
+        height: $cube-dim;
+        top: -2px; 
+        left: -2px;
+        border-radius: 15%;
+    }
+}
+
+

@@ -354,6 +354,11 @@ h1 {
   margin: 0;
 }
 
+a {
+  text-decoration: none;
+  color: white;
+}
+
 .about {
   color: black;
   margin: 20px 50px;
@@ -519,6 +524,7 @@ h1 {
   .project-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    height: 100vh;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -845,6 +851,60 @@ h1 {
   .cube-right {
     transform: rotateY(90deg) translateZ(83px);
   }
+}
+.archive-grid {
+  display: grid;
+  height: 100vh;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 200px);
+  grid-gap: 20px 20px;
+  padding: 10px;
+  justify-items: center;
+}
+
+.selected {
+  grid-column-start: span 3;
+  display: flex;
+  align-items: center;
+  color: white;
+  max-height: 200px;
+}
+
+.project-details {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+  flex-basis: 50%;
+}
+
+.site-buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.hide {
+  display: none;
+}
+
+.archive-face {
+  position: relative;
+  display: flex;
+  top: 0;
+  left: 0;
+  width: 190px;
+  height: 190px;
+  border: 2px solid #7df9ff;
+}
+.archive-face:before {
+  content: "";
+  position: absolute;
+  border: 2px solid #4B4E53;
+  width: 190px;
+  height: 190px;
+  top: -2px;
+  left: -2px;
+  border-radius: 15%;
 }
 
 /*# sourceMappingURL=styles.css.map */

@@ -9,6 +9,11 @@ h1 {
     margin: 0;
 }
 
+a {
+    text-decoration: none;
+    color: white;
+}
+
 .about {
     color: black;
     margin: 20px 50px; 
@@ -183,10 +188,13 @@ h1 {
     }
 }
 
+
 @media screen and (min-width: 768px) {
     .project-grid {
         display: grid; 
         grid-template-columns: 1fr 1fr;
+        // grid-template-rows: 50% 50%;
+        height: 100vh;
     }
 }
 
