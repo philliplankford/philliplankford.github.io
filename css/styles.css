@@ -1054,32 +1054,90 @@ svg:hover {
   transform: rotateY(90deg) translateZ(34px);
 }
 
-.contact-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr;
-  grid-gap: 20px;
-  padding: 20px;
-}
-
 .contact-panel {
   border: 1px solid white;
   color: white;
+  display: grid;
+  grid-template-columns: 1fr 10rem;
+  grid-template-rows: min-content 1fr;
+  grid-template-areas: "about about" "contact contact";
+  grid-gap: 10px 0px;
+  height: 100vh;
+  padding: 10px;
+}
+
+.character-sheet {
+  grid-area: about;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
-.contact-panel p {
+  padding: 10px;
   border: 1px solid white;
-  padding: 5px;
+  border-left: 30px solid white;
+  line-height: 1.5rem;
+}
+
+.about {
+  grid-column-start: 1 span 2;
+}
+.about p {
+  margin-bottom: 10px;
+}
+.about h3 {
+  padding-top: 5px;
+  margin-bottom: 5px;
+  letter-spacing: 1.2rem;
+}
+
+.socials {
+  grid-area: socials;
+  height: 100%;
+  width: 100%;
+  border: 1px solid #a2ffd1;
+  border-top: 30px solid #a2ffd1;
+  background-color: #a2ffd1;
 }
 
 .contact-info {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  padding-top: 20px;
+  grid-area: contact;
+  height: 100%;
+  width: 100%;
+  border: 1px solid white;
+  border-right: 50px solid white;
+}
+.contact-info h3 {
+  position: relative;
+  margin-bottom: 10px;
+  letter-spacing: 1.2rem;
+  padding-left: 5px;
+  border-left: 5rem solid white;
+  transition: border-left 0.5s ease, color 0.5s ease;
+}
+@media screen and (min-width: 768px) {
+  .contact-info h3 {
+    border-left: 10rem solid white;
+  }
+}
+.contact-info h3:after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 100%;
+  top: 0;
+  right: 0;
+  z-index: -1;
+  background-color: white;
+  transition: all 0.5s ease;
+}
+.contact-info h3:hover {
+  color: black;
+  border-left: 0rem solid white;
+}
+.contact-info h3:hover:after {
+  left: 0;
+  width: 100%;
 }
 
 /*# sourceMappingURL=styles.css.map */
