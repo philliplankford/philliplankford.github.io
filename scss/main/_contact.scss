@@ -1,0 +1,29 @@
+.contact-grid {
+    display: grid; 
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-gap: 20px;
+    padding: 20px;
+    // perspective: 1500px;
+}
+
+.contact-panel {
+    border: 1px solid white;
+    color: white;
+   //  transform: rotateY(-15deg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    p {
+        border: 1px solid white;
+        padding: 5px;
+    }
+}
+
+.contact-info {
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+}

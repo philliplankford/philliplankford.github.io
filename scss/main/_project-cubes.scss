@@ -32,6 +32,7 @@ $inner-cube-tranZ: math.div($cube-tranZ, 2);
       height: $cube-dim + 10px;
     }
   }
+  
   .cube {
     display: flex;
     position: relative;
@@ -51,9 +52,6 @@ $inner-cube-tranZ: math.div($cube-tranZ, 2);
       width: 50%;
       height: 50%;
       border: 2px solid rgba(125, 249, 255, .5);
-        // background: rgba(125, 249, 255, 1) no-repeat url("https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg");
-      // background-size: cover;
-      // background-blend-mode: hard-light;
       opacity: 1;
       &:before {
         content:'';
@@ -108,6 +106,10 @@ $inner-cube-tranZ: math.div($cube-tranZ, 2);
 
   .project-button {
     width: 100%;
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     background: none;
     border: 2px solid;
     line-height: 1;
@@ -126,8 +128,31 @@ $inner-cube-tranZ: math.div($cube-tranZ, 2);
       box-shadow: 
       0 0 0 0 $col-primary,
       inset 6em 11em 0 0 $col-primary;
+      .triangle {
+        display: flex;
+        border-left: 10px solid white;
+      }
     }
   }
+
+  .triangles {
+    display: flex;
+    margin-top: 4px;
+  }
+
+  .triangle {
+    display: none;
+    width: 0;
+    height: 0;
+    border-top: 5px solid transparent;
+    border-left: 10px solid $col-primary;
+    border-bottom: 5px solid transparent;
+    margin-right: 2px;
+  }
+
+  // .mb {
+  //   margin-bottom: 4px;
+  // }
 
   .project-year {
     padding: 5px;
@@ -197,7 +222,7 @@ $inner-cube-tranZ: math.div($cube-tranZ, 2);
     // .project {
     //   position: absolute;
     // }
-    
+
     $cube-dim: $cube-dim - 30px; 
     .cube {
         width: $cube-dim;
