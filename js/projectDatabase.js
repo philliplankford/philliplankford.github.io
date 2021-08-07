@@ -4,7 +4,7 @@ projects = [
         name: "employee directory",
         year: "2021",
         tags: "searchable employee catalog fetch api",
-        description: "View and search an employee directory. Data is fetched from an external API.",
+        description: "View and search an employee directory. Data is fetched from an external API. Click an employee to view detailed information in a modal window.",
         codeLink: "https://github.com/philliplankford/tech-degree-project-8",
         siteLink: "",
         icon: ""

@@ -523,6 +523,7 @@ svg:hover {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     height: 100vh;
+    overflow: scroll;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -584,7 +585,7 @@ svg:hover {
 }
 @keyframes cube-rotate {
   50% {
-    transform: rotateX(11deg) rotateY(7deg);
+    transform: rotateX(5deg) rotateY(5deg);
   }
   100% {
     transform: rotateX(-30deg) rotateY(-40deg);
@@ -862,6 +863,7 @@ svg:hover {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 200px);
     height: 100vh;
+    overflow: scroll;
   }
 
   .selected {
