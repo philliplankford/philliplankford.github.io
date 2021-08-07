@@ -447,7 +447,7 @@ a {
   flex-direction: column;
   justify-content: space-between;
   height: 400px;
-  background: linear-gradient(90deg, #a2ffd1 0%, #83ffff 50%, #fab0ff 100%), url("../../img/IMG_0195.JPG");
+  background: linear-gradient(90deg, #a2ffd1 0%, #83ffff 50%, #fab0ff 100%), url(https://previews.dropbox.com/p/thumb/ABQ10tr9lkodAdAciZ0qPBAj8MeRO2JKtxTjhjBe9FkrFF3lUuvjNB7qKPLVfd7kBUfjxM445R7Pnb05gukXQT8D6rGBm1sRwfym2syepNV5b6WcO2D1cJeER32daXXv6mCiTApvkOEQ_3a1Pb8TwIk43BMSK6sWsAHCpzC1ZXaMu2mA7BzWsQwdLaWbcDb6AEfBhj3YfQ6u7WSdKi8hi1mrI9EZ5AIxMbIxWRRZrYrwI9FY2OQ6wIsXCs9oXakl19SuqMzuYy6UJivtfrXQt3rEB6-MS2jHQeas6vNMLC1LOLcTls8KWCPMPOi-0hWUJGQ9TFhWGABvJEvmofuT6_eULNn5MbVqSlJiJejLr3_-zIPxrfdABRAsUC78B5-EVWCxco9e1MHwbLl7jSunHCLmLtZH5TVgNufxHUqHBbt6dusa8tEpsDaKiNRyE8CSeGA/p.jpeg?fv_content=true&size_mode=5);
   background-blend-mode: overlay;
   background-size: cover;
   padding: 10px;
@@ -594,7 +594,7 @@ svg:hover {
 }
 @keyframes cube-rotate {
   50% {
-    transform: rotateX(7deg) rotateY(9deg);
+    transform: rotateX(6deg) rotateY(10deg);
   }
   100% {
     transform: rotateX(-30deg) rotateY(-40deg);
