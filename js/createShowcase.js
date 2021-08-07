@@ -10,7 +10,7 @@ const showcase = [
 
 let projHTML = '';
 
-showcase.forEach(element => {
+showcase.forEach( (element, index) => {
 
     let tagHTML = '';
     let tags = element.tags.split(' ');
@@ -30,8 +30,8 @@ showcase.forEach(element => {
             <div class="inner-face inner-left"></div>
             <div class="inner-face inner-right"></div>
         
-            <div class="cube-face cube-front">
-                <a class="project-button">${element.name}
+            <div class="cube-face cube-front"> 
+                <a href="archive.html" class="project-button" data-index="${index}">${element.name}
                     <div class="triangles">
                         <div class="triangle"></div>
                         <div class="triangle"></div>
@@ -57,3 +57,11 @@ showcase.forEach(element => {
 })
 
 showcaseGrid.innerHTML = projHTML;
+
+showcaseGrid.addEventListener("click", (e) => {
+    if (e.target.className === "project-button") {
+        console.log(e.target.getAttribute('data-index'));
+        let ind = e.target.getAttribute('data-index');
+        localStorage.setItem("highlightIndex", ind);
+    }
+})

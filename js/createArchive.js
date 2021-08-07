@@ -17,7 +17,7 @@ projects.forEach((elem, ind) => {
 
 
     <div class="archive-cube-face archive-cube-front" data-index="${ind}">
-        <a class="project-button">
+        <a class="project-button" data-index="${ind}">
             ${elem.name}
         </a>
     </div>
@@ -43,8 +43,13 @@ archiveGrid.innerHTML += html;
 const highlight = document.getElementById("selected");
 const archiveFace = document.querySelector(".archive-cube-face");
 
+
+let highlightIndex = 0;
+
+if (localStorage.getItem("highlightIndex")) { highlightIndex = parseInt(localStorage.getItem("highlightIndex")) };
+
 highlight.innerHTML =  `
-    <div class="archive-cube rotate" data-index="0">
+    <div class="archive-cube rotate">
 
         <div class="archive-inner-face archive-inner-front"></div>
         <div class="archive-inner-face archive-inner-back"></div>
@@ -55,13 +60,13 @@ highlight.innerHTML =  `
 
 
         <div class="archive-cube-face archive-cube-front" data-index="0">
-            <a class="project-button">
-                ${projects[0].name}
+            <a class="project-button" data-index="${highlightIndex}">
+                ${projects[highlightIndex].name}
             </a>
         </div>
         <div class="archive-cube-face archive-cube-back"></div>
         <div class="archive-cube-face archive-cube-bottom">
-            <p class="project-year">${projects[0].year}</p>
+            <p class="project-year">${projects[highlightIndex].year}</p>
         </div>
         <div class="archive-cube-face archive-cube-top"></div>
         <div class="archive-cube-face archive-cube-left"></div>
@@ -75,9 +80,9 @@ highlight.innerHTML =  `
         </div>
     </div>
     <div class="project-details">
-        <h3>${projects[0].name}</h3>
-        <p>${projects[0].year}</p>
-        <p>${projects[0].description}</p>
+        <h3>${projects[highlightIndex].name}</h3>
+        <p>${projects[highlightIndex].year}</p>
+        <p>${projects[highlightIndex].description}</p>
         </div>
         <div class="site-buttons">
         <a class="project-button">SITE</a>
@@ -87,7 +92,7 @@ highlight.innerHTML =  `
 `
 
 archiveGrid.addEventListener("click", (e) => {
-    if (e.target.className === "archive-cube-face archive-cube-front" || e.target.className === "archive-cube-face archive-cube-right") {
+    if (e.target.className === "project-button") {
         const ind = parseInt(e.target.getAttribute('data-index'));
         const proj = projects[ind];
         highlight.innerHTML = `
@@ -102,7 +107,7 @@ archiveGrid.addEventListener("click", (e) => {
         
         
             <div class="archive-cube-face archive-cube-front" data-index="${ind}">
-                <a class="project-button">
+                <a class="project-button" data-index="${ind}">
                     ${proj.name}
                 </a>
             </div>
