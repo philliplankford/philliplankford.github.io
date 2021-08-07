@@ -522,6 +522,7 @@ svg:hover {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
+    height: 100vh;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -581,89 +582,18 @@ svg:hover {
     justify-content: space-between;
   }
 }
-.html-rating,
-.css-rating,
-.js-rating {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-top: 8px;
-}
-.html-rating p,
-.css-rating p,
-.js-rating p {
-  flex-basis: 60%;
-}
-
-.html-bar {
-  position: relative;
-  width: 100%;
-  height: 10px;
-  border: 1px solid white;
-}
-
-.html-bar-fill {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  width: 80%;
-  background-color: white;
-}
-
-.css-bar {
-  position: relative;
-  width: 100%;
-  height: 10px;
-  border: 1px solid white;
-}
-
-.css-bar-fill {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  width: 70%;
-  background-color: white;
-}
-
-.js-bar {
-  position: relative;
-  width: 100%;
-  height: 10px;
-  border: 1px solid white;
-}
-
-.js-bar-fill {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  width: 50%;
-  background-color: white;
-}
-
-.project-grid * {
-  transform-style: preserve-3d;
-}
-
 @keyframes cube-rotate {
   50% {
-    transform: rotateX(30deg) rotateY(20deg);
+    transform: rotateX(11deg) rotateY(7deg);
   }
   100% {
     transform: rotateX(-30deg) rotateY(-40deg);
   }
 }
-@keyframes cube-grow {
-  50% {
-    width: 200px;
-    height: 200px;
-  }
+.project-grid * {
+  transform-style: preserve-3d;
 }
+
 .cube {
   display: flex;
   position: relative;
@@ -713,18 +643,6 @@ svg:hover {
   top: -2px;
   left: -2px;
   border-radius: 15%;
-}
-
-.inner-image {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  width: 100%;
-  height: 100%;
-  transform-style: preserve-3d;
-  background: no-repeat url("https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg");
 }
 
 .project-button {
@@ -861,6 +779,10 @@ svg:hover {
   justify-items: center;
 }
 
+.archive-grid * {
+  transform-style: preserve-3d;
+}
+
 .selected {
   grid-column-start: span 1;
   display: flex;
@@ -939,6 +861,7 @@ svg:hover {
   .archive-grid {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 200px);
+    height: 100vh;
   }
 
   .selected {

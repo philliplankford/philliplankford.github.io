@@ -1,12 +1,15 @@
 .archive-grid {
     display: grid; 
-    //height: 100vh;
     grid-template-columns: 1fr;
     //grid-template-rows: 1fr 200px 200px;
     //grid-gap: 20px 20px;
     padding: 10px;
     justify-items: center;
 }
+
+.archive-grid * {
+    transform-style: preserve-3d;
+  }
 
 .selected {
     grid-column-start: span 1;
@@ -94,6 +97,7 @@
     .archive-grid {
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(3, 200px);
+        height: 100vh;
     }
 
     .selected {

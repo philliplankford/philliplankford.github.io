@@ -4,56 +4,62 @@ $cube-tranZ: math.div($cube-dim, 2) + 3;
 
 $inner-cube-tranZ: math.div($cube-tranZ, 2);
 
-.project-grid {
-  // position: relative; //get rid of this to snap to grid
-    // height: 100vh;
-    // perspective: 1500px;
-    // background: #4B4E53;;
-  }
-  
-  .project-grid * {
-    // position: absolute;
-    // top: 50%; left: 50%;
-    transform-style: preserve-3d;
-  }
-  
-  @keyframes cube-rotate{
-    50% {
-          transform: rotateX(30deg) rotateY(20deg);
-    }
-    100% {
-      transform: rotateX(-30deg) rotateY(-40deg);
-    }
-  }
-  
-  @keyframes cube-grow {
-    50% {
-      width: $cube-dim + 10px; 
-      height: $cube-dim + 10px;
-    }
-  }
-  
-  .cube {
-    display: flex;
-    position: relative;
-    width: $cube-dim;
-    height: $cube-dim;
-    transform-style: preserve-3d;
-    transform: rotateX(-30deg) rotateY(-40deg);
-    margin: 40px auto 60px;
-    // transition: transform 10s linear;
-    animation: cube-rotate 30s infinite; //, cube-grow 10s infinite;
-    }
+$rotate-x: random(20);
+$rotate-y: random(10);
 
-  .inner-face {
+@keyframes cube-rotate{
+  50% {
+        transform: rotateX(#{$rotate-x}deg) rotateY(#{$rotate-y}deg);
+  }
+  100% {
+    transform: rotateX(-30deg) rotateY(-40deg);
+  }
+}
+
+.project-grid * {
+  transform-style: preserve-3d;
+}
+
+.cube {
+  display: flex;
+  position: relative;
+  width: $cube-dim;
+  height: $cube-dim;
+  transform-style: preserve-3d;
+  transform: rotateX(-30deg) rotateY(-40deg);
+  margin: 40px auto 60px;
+  animation: cube-rotate 30s infinite;
+  }
+
+.inner-face {
+    position: absolute;
+    top: 25%;
+    left: 25%;
+    width: 50%;
+    height: 50%;
+    border: 2px solid rgba(125, 249, 255, .5);
+    opacity: 1;
+    &:before {
+      content:'';
       position: absolute;
-      top: 25%;
-      left: 25%;
-      width: 50%;
-      height: 50%;
-      border: 2px solid rgba(125, 249, 255, .5);
-      opacity: 1;
-      &:before {
+      border: 2px solid #4B4E53;
+      height: 100%; 
+      width: 100%;
+      top: -2px; 
+      left: -2px;
+      border-radius: 15%;
+  }
+}
+
+.cube-face {
+    position: absolute;
+    display: flex; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 2px solid rgba(125, 249, 255, 1);
+    &:before {
         content:'';
         position: absolute;
         border: 2px solid #4B4E53;
@@ -63,195 +69,148 @@ $inner-cube-tranZ: math.div($cube-tranZ, 2);
         left: -2px;
         border-radius: 15%;
     }
-  }
-  
-  .cube-face {
-      position: absolute;
-      display: flex; 
-      // align-items: flex-end;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      border: 2px solid rgba(125, 249, 255, 1);
-      // background-color: rgba(255, 255, 255, 0.1);
-      ///filter: blur(2px);
-      &:before {
-          content:'';
-          position: absolute;
-          border: 2px solid #4B4E53;
-          height: 100%; 
-          width: 100%;
-          top: -2px; 
-          left: -2px;
-          border-radius: 15%;
-      }
-  }
-  
-  .project {
-    //position: absolute; //get rid of this to snap to grid
-  }
+}
 
-  .inner-image {
-    position: absolute;
-    top: 0; 
-   left: 0;
-    bottom: 0; 
-    right: 0;
-      width: 100%;
-      height: 100%;
-      transform-style: preserve-3d;
-      background: no-repeat url("https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg");
-  }
+.project {
+  //position: absolute; //get rid of this to snap to grid
+}
 
-  .project-button {
-    width: 100%;
-    display: flex; 
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background: none;
-    border: 2px solid;
-    line-height: 1;
-    margin: 0.5em;
-    padding: 1em 2em;
-    color: $col-primary;
-    transition: border-color 0.25s, box-shadow 0.25s, color 0.25s;
+.project-button {
+  width: 100%;
+  display: flex; 
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: none;
+  border: 2px solid;
+  line-height: 1;
+  margin: 0.5em;
+  padding: 1em 2em;
+  color: $col-primary;
+  transition: border-color 0.25s, box-shadow 0.25s, color 0.25s;
+  box-shadow: 
+  0.3em 0.3em 0 0 $col-highlight,
+  inset 0.3em 0.3em 0 0 $col-highlight;
+  
+  &:hover,
+  &:focus { 
+    border-color: $col-primary;
+    color: white;
     box-shadow: 
-    0.3em 0.3em 0 0 $col-highlight,
-    inset 0.3em 0.3em 0 0 $col-highlight;
+    0 0 0 0 $col-primary,
+    inset 6em 11em 0 0 $col-primary;
+    .triangle {
+      display: flex;
+      border-left: 10px solid white;
+    }
+  }
+}
+
+.triangles {
+  display: flex;
+  margin-top: 4px;
+}
+
+.triangle {
+  display: none;
+  width: 0;
+  height: 0;
+  border-top: 5px solid transparent;
+  border-left: 10px solid $col-primary;
+  border-bottom: 5px solid transparent;
+  margin-right: 2px;
+}
+
+.project-year {
+  padding: 5px;
+}
+
+.cube-tags {
+  list-style: none;
+  padding: 5px;
+}
+
+.cube-front {
+  transform: translateZ($cube-tranZ);
+}
+
+.cube-back {
+  transform: rotateY(180deg) translateZ($cube-tranZ);
+}
+
+.cube-bottom {
+  transform: rotateX(-90deg) translateZ($cube-tranZ);
+}
+
+.cube-top {
+  transform: rotateX(90deg) translateZ($cube-tranZ);
+}
+
+.cube-left {
+  transform: rotateY(-90deg) translateZ($cube-tranZ);
+}
+
+.cube-right {
+  transform: rotateY(90deg) translateZ($cube-tranZ);
+
+}
+
+// inner
+.inner-front {
+  transform: translateZ($inner-cube-tranZ);
+}
+
+.inner-back {
+  transform: rotateY(180deg) translateZ($inner-cube-tranZ);
+}
+
+.inner-bottom {
+  transform: rotateX(-90deg) translateZ($inner-cube-tranZ);
+}
+
+.inner-top {
+  transform: rotateX(90deg) translateZ($inner-cube-tranZ);
+}
+
+.inner-left {
+  transform: rotateY(-90deg) translateZ($inner-cube-tranZ);
+}
+
+.inner-right {
+  transform: rotateY(90deg) translateZ($inner-cube-tranZ);
+}
+
+@media screen and (min-width: 1024px) {
+
+  $cube-dim: $cube-dim - 30px; 
+  .cube {
+      width: $cube-dim;
+      height: $cube-dim;
+  }
+  $cube-tranZ: math.div($cube-dim, 2) + 3;
     
-    &:hover,
-    &:focus { 
-      border-color: $col-primary;
-      color: white;
-      box-shadow: 
-      0 0 0 0 $col-primary,
-      inset 6em 11em 0 0 $col-primary;
-      .triangle {
-        display: flex;
-        border-left: 10px solid white;
-      }
-    }
-  }
-
-  .triangles {
-    display: flex;
-    margin-top: 4px;
-  }
-
-  .triangle {
-    display: none;
-    width: 0;
-    height: 0;
-    border-top: 5px solid transparent;
-    border-left: 10px solid $col-primary;
-    border-bottom: 5px solid transparent;
-    margin-right: 2px;
-  }
-
-  // .mb {
-  //   margin-bottom: 4px;
-  // }
-
-  .project-year {
-    padding: 5px;
-  }
-  
-  .cube-tags {
-    list-style: none;
-    padding: 5px;
-    // text-align: right;
-  }
-  
   .cube-front {
-      transform: translateZ($cube-tranZ);
-  }
-  
-  .cube-back {
-      transform: rotateY(180deg) translateZ($cube-tranZ);
-  }
-  
-  .cube-bottom {
-      transform: rotateX(-90deg) translateZ($cube-tranZ);
-  }
-  
-  .cube-top {
-      transform: rotateX(90deg) translateZ($cube-tranZ);
-  }
-  
-  .cube-left {
-      transform: rotateY(-90deg) translateZ($cube-tranZ);
-  }
-  
-  .cube-right {
-      transform: rotateY(90deg) translateZ($cube-tranZ);
-
-  }
-  
-  // inner
-  .inner-front {
-      transform: translateZ($inner-cube-tranZ);
-  }
-  
-  .inner-back {
-      transform: rotateY(180deg) translateZ($inner-cube-tranZ);
-  }
-  
-  .inner-bottom {
-      transform: rotateX(-90deg) translateZ($inner-cube-tranZ);
-  }
-  
-  .inner-top {
-      transform: rotateX(90deg) translateZ($inner-cube-tranZ);
-  }
-  
-  .inner-left {
-      transform: rotateY(-90deg) translateZ($inner-cube-tranZ);
-  }
-  
-  .inner-right {
-      transform: rotateY(90deg) translateZ($inner-cube-tranZ);
-  }
-
-  @media screen and (min-width: 1024px) {
-
-    // .project-grid{
-    //   position: relative;
-    // }
-    // .project {
-    //   position: absolute;
-    // }
-
-    $cube-dim: $cube-dim - 30px; 
-    .cube {
-        width: $cube-dim;
-        height: $cube-dim;
-    }
-    $cube-tranZ: math.div($cube-dim, 2) + 3;
-      
-    .cube-front {
-      transform: translateZ($cube-tranZ);
+    transform: translateZ($cube-tranZ);
   }
 
   .cube-back {
-      transform: rotateY(180deg) translateZ($cube-tranZ);
+    transform: rotateY(180deg) translateZ($cube-tranZ);
   }
 
   .cube-bottom {
-      transform: rotateX(-90deg) translateZ($cube-tranZ);
+    transform: rotateX(-90deg) translateZ($cube-tranZ);
   }
 
   .cube-top {
-      transform: rotateX(90deg) translateZ($cube-tranZ);
+    transform: rotateX(90deg) translateZ($cube-tranZ);
   }
 
   .cube-left {
-      transform: rotateY(-90deg) translateZ($cube-tranZ);
+    transform: rotateY(-90deg) translateZ($cube-tranZ);
   }
 
   .cube-right {
-      transform: rotateY(90deg) translateZ($cube-tranZ);
+    transform: rotateY(90deg) translateZ($cube-tranZ);
 
   }
-  }
+}
