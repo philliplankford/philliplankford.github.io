@@ -1,20 +1,20 @@
 projects = [
 
     {
-        name: "digi-farm",
+        name: "employee directory",
         year: "2021",
-        tags: "unique crypto farming sim",
-        description: "A unique crypto farming sim that uses api to fetch real time crypto prices players buy sell and hold plots of crypto",
-        codeLink: "",
+        tags: "searchable employee catalog fetch api",
+        description: "View and search an employee directory. Data is fetched from an external API.",
+        codeLink: "https://github.com/philliplankford/tech-degree-project-8",
         siteLink: "",
         icon: ""
     },
     {
         name: "web app",
         year: "2021",
-        tags: "js sass html",
-        description: "a mock up of a web app dashboard that displays many types of data",
-        codeLink: "",
+        tags: "web app dashboard data library",
+        description: "a mock up of a web app dashboard that displays data traffic and social activity",
+        codeLink: "https://github.com/philliplankford/tech-degree-project-7",
         siteLink: "",
         icon: ""
     },
