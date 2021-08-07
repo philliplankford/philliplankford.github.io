@@ -447,7 +447,7 @@ a {
   flex-direction: column;
   justify-content: space-between;
   height: 400px;
-  background: linear-gradient(90deg, #a2ffd1 0%, #83ffff 50%, #fab0ff 100%), url("https://previews.dropbox.com/p/thumb/ABMjxDWoTXqcLBJ26dQAlZ7ZrzkYNT085HTsJuP6fKHkBw1SOhc23PA0C88awbDAs35oAXg8XopgrJDapQUP6M64WmLNkHJOW3eDCu0d1eAel8p5mGGXRakhoyglcrbd5iEs-20sybX3IS0JzeIhF09vF6nC5iVaPVTRsszxqvLVmO-0009F-Y7Jvv1WVElR5LmyuWe4Gjdf0OPPWvI9F1z4-Isy_Y9AqIggGnDnjmLGO7XL5GBgklNfd1KPiHrPc7UhTdG6XUVtS9-G9bdD_k_SycF1Pmbiyav3vOmFcv6FUux4d7lsnSpTMy18S8p3G8zjJxnHetsYZYcTcBNnTAUif0CW7yNt-NWtQDA2uTPQi4f-W9pEK_bCJPc1vMlqPwu_goUxciZVEUNUZ1SimuuBobe9w24UqHaLQJU_FJQjnwzzodPfRxhPtOS0ck0jPXw/p.jpeg?fv_content=true&size_mode=5");
+  background: linear-gradient(90deg, #a2ffd1 0%, #83ffff 50%, #fab0ff 100%), url("../../img/IMG_0195.JPG");
   background-blend-mode: overlay;
   background-size: cover;
   padding: 10px;
@@ -515,6 +515,15 @@ svg:hover {
 }
 .name-title h1 {
   font-size: 1.7rem;
+}
+
+.archive-cube a,
+.cube a {
+  text-align: center;
+}
+
+.archive-cube a {
+  font-size: 0.8rem;
 }
 
 @media screen and (min-width: 768px) {
@@ -585,7 +594,7 @@ svg:hover {
 }
 @keyframes cube-rotate {
   50% {
-    transform: rotateX(5deg) rotateY(5deg);
+    transform: rotateX(7deg) rotateY(9deg);
   }
   100% {
     transform: rotateX(-30deg) rotateY(-40deg);
