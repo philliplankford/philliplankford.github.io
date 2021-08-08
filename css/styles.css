@@ -426,19 +426,33 @@ a {
 .site-nav ul a:hover {
   color: black;
 }
-.site-nav ul li {
+.site-nav ul .home {
+  margin-right: 10px;
+}
+
+.archive-nav li {
   padding: 7px;
   border: 1px solid white;
   color: white;
   font-weight: 600;
   transition: background-color 0.5s ease-in, color 0.5s ease-in;
 }
-.site-nav ul li:hover {
+.archive-nav li:hover {
   color: black;
   background-color: white;
 }
-.site-nav ul .home {
-  margin-right: 10px;
+
+.archive-link {
+  height: 28px;
+  padding: 7px;
+  border: 1px solid white;
+  color: white;
+  font-weight: 600;
+  transition: background-color 0.5s ease-in, color 0.5s ease-in;
+}
+.archive-link:hover {
+  color: black;
+  background-color: white;
 }
 
 .my-card {
@@ -556,10 +570,6 @@ svg:hover {
     justify-content: space-between;
   }
 
-  .archive-nav {
-    margin-right: 10px;
-  }
-
   .hide-lg {
     display: none;
   }
@@ -597,7 +607,7 @@ svg:hover {
 }
 @keyframes cube-rotate {
   50% {
-    transform: rotateX(14deg) rotateY(8deg);
+    transform: rotateX(7deg) rotateY(9deg);
   }
   100% {
     transform: rotateX(-30deg) rotateY(-40deg);

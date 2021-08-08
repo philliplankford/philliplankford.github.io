@@ -1,5 +1,4 @@
 body {
-    // width: 100vw;
     height: 100vh;
     padding: .5rem;
     background-color: $col-background;
@@ -7,7 +6,6 @@ body {
 
 h1 {
     margin: 0;
-    // letter-spacing: .5rem;
 }
 
 h2 {
@@ -20,7 +18,7 @@ h3 {
 
 a {
     text-decoration: none;
-    color: white; //white
+    color: white;
 }
 
 .project-grid {
@@ -35,11 +33,8 @@ a {
     display: flex; 
     flex-direction: column;
     align-items: center;
-    // border: 1px solid black; 
-    // border-radius: 10px;
     padding: 20px 10px;
     position: relative;
-    //overflow: hidden;
     color: white;
     line-height: 1.3rem;
 }
@@ -67,9 +62,7 @@ a {
 }
 
 .outer-wrapper {
-    // height: 100vh;
     border: 1px solid $col-outlines;
-    // border-radius: 10px;
     padding: 5px;
 }
 
@@ -87,24 +80,47 @@ a {
         a:hover {
             color: black;
         }
-        li {
-            padding: 7px; 
-            // margin-right: 10px;
-            border: 1px solid $col-text;
-            // width: 50%;
-            // background-color: rgba(250,176,255,1) ; //#E18AAA
-            // box-shadow: -4px 4px 0 0px rgba(131,255,255,1) ;
-            color: white;
-            font-weight: 600;
-            transition: background-color .5s ease-in, color .5s ease-in;
-            &:hover {
-                color: black;
-                background-color: $col-text;
-            }
-        }
+        // li {
+        //     padding: 7px; 
+        //     border: 1px solid $col-text;
+        //     color: white;
+        //     font-weight: 600;
+        //     transition: background-color .5s ease-in, color .5s ease-in;
+        //     &:hover {
+        //         color: black;
+        //         background-color: $col-text;
+        //     }
+        // }
         .home {
             margin-right: 10px;
         }
+    }
+}
+
+.archive-nav {
+    li {
+        padding: 7px; 
+        border: 1px solid $col-text;
+        color: white;
+        font-weight: 600;
+        transition: background-color .5s ease-in, color .5s ease-in;
+        &:hover {
+            color: black;
+            background-color: $col-text;
+        }
+    }
+}
+
+.archive-link {
+    height: 28px; // temp nav lineup fix
+    padding: 7px; 
+    border: 1px solid $col-text;
+    color: white;
+    font-weight: 600;
+    transition: background-color .5s ease-in, color .5s ease-in;
+    &:hover {
+        color: black;
+        background-color: $col-text;
     }
 }
 
@@ -113,11 +129,9 @@ a {
     flex-direction: column;
     justify-content: space-between;
     height: 400px; 
-    // max-width: 315px;
     background: linear-gradient(90deg, rgba(162,255,209,1) 0%, rgba(131,255,255,1) 50%, rgba(250,176,255,1) 100%), url(https://previews.dropbox.com/p/thumb/ABQ10tr9lkodAdAciZ0qPBAj8MeRO2JKtxTjhjBe9FkrFF3lUuvjNB7qKPLVfd7kBUfjxM445R7Pnb05gukXQT8D6rGBm1sRwfym2syepNV5b6WcO2D1cJeER32daXXv6mCiTApvkOEQ_3a1Pb8TwIk43BMSK6sWsAHCpzC1ZXaMu2mA7BzWsQwdLaWbcDb6AEfBhj3YfQ6u7WSdKi8hi1mrI9EZ5AIxMbIxWRRZrYrwI9FY2OQ6wIsXCs9oXakl19SuqMzuYy6UJivtfrXQt3rEB6-MS2jHQeas6vNMLC1LOLcTls8KWCPMPOi-0hWUJGQ9TFhWGABvJEvmofuT6_eULNn5MbVqSlJiJejLr3_-zIPxrfdABRAsUC78B5-EVWCxco9e1MHwbLl7jSunHCLmLtZH5TVgNufxHUqHBbt6dusa8tEpsDaKiNRyE8CSeGA/p.jpeg?fv_content=true&size_mode=5); //url(../../img/IMG_0195.JPG);
     background-blend-mode: overlay;
     background-size: cover;
-    //border-radius: 10px;
     padding: 10px;
     position: relative; 
 }
@@ -203,7 +217,7 @@ svg {
     .project-grid {
         display: grid; 
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr;//400px 400px;
+        grid-template-rows: 1fr 1fr;
         height: 100vh;
         @media screen and (max-height: 660px) {
             overflow-y: scroll;
@@ -220,8 +234,6 @@ svg {
         justify-content: space-between;
  
         ul {
-            //height: 100%;
-            //align-items: center;
             .home {
                 margin: 0;
                 margin-right: 10px;
@@ -234,9 +246,9 @@ svg {
         justify-content: space-between;
     }
 
-    .archive-nav {
-        margin-right: 10px;
-    }
+    // .archive-nav {
+    //     margin-right: 10px;
+    // }
 
     .hide-lg {
         display: none;
