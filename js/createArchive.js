@@ -28,7 +28,7 @@ projects.forEach((elem, ind) => {
 
 
     <div class="archive-cube-face archive-cube-front" data-index="${ind}">
-        <a class="project-button" data-index="${ind}">
+        <a href="#archive-header" class="project-button" data-index="${ind}">
             ${elem.name}
         </a>
     </div>
@@ -69,7 +69,7 @@ highlight.innerHTML =  `
 
 
         <div class="archive-cube-face archive-cube-front" data-index="0">
-            <a class="project-button" data-index="${highlightIndex}">
+            <a href="#archive-header" class="project-button" data-index="${highlightIndex}">
                 ${projects[highlightIndex].name}
             </a>
         </div>
@@ -117,7 +117,7 @@ archiveGrid.addEventListener("click", (e) => {
         
         
             <div class="archive-cube-face archive-cube-front" data-index="${ind}">
-                <a class="project-button" data-index="${ind}">
+                <a href="#archive-header" class="project-button" data-index="${ind}">
                     ${proj.name}
                 </a>
             </div>

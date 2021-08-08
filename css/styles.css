@@ -597,7 +597,7 @@ svg:hover {
 }
 @keyframes cube-rotate {
   50% {
-    transform: rotateX(1deg) rotateY(6deg);
+    transform: rotateX(3deg) rotateY(10deg);
   }
   100% {
     transform: rotateX(-30deg) rotateY(-40deg);
@@ -805,6 +805,7 @@ svg:hover {
   width: 100%;
   justify-content: center;
   transition: width 10s ease-in-out;
+  margin-bottom: 20px;
 }
 
 .project-details {
