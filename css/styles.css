@@ -566,6 +566,7 @@ svg:hover {
   .my-card {
     grid-area: personal-card;
     background: linear-gradient(90deg, #a2ffd1 0%, #83ffff 50%, #fab0ff 100%), url(../../img/profile-lg.jpg);
+    background-position-y: -300px;
   }
 
   .site-nav {
@@ -618,7 +619,7 @@ svg:hover {
 }
 @keyframes cube-rotate {
   50% {
-    transform: rotateX(8deg) rotateY(8deg);
+    transform: rotateX(14deg) rotateY(5deg);
   }
   100% {
     transform: rotateX(-30deg) rotateY(-40deg);
