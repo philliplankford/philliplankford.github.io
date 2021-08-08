@@ -205,7 +205,9 @@ svg {
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr;//400px 400px;
         height: 100vh;
-        overflow: scroll;
+        @media screen and (max-height: 660px) {
+            overflow-y: scroll;
+        }
     }
 }
 

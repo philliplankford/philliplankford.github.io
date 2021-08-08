@@ -531,7 +531,11 @@ svg:hover {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     height: 100vh;
-    overflow: scroll;
+  }
+}
+@media screen and (min-width: 768px) and (max-height: 660px) {
+  .project-grid {
+    overflow-y: scroll;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -593,7 +597,7 @@ svg:hover {
 }
 @keyframes cube-rotate {
   50% {
-    transform: rotateX(12deg) rotateY(5deg);
+    transform: rotateX(1deg) rotateY(6deg);
   }
   100% {
     transform: rotateX(-30deg) rotateY(-40deg);
@@ -871,15 +875,21 @@ svg:hover {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 200px);
     height: 100vh;
-    overflow: scroll;
   }
-
+}
+@media screen and (min-width: 768px) and (max-height: 660px) {
+  .archive-grid {
+    overflow-y: scroll;
+  }
+}
+@media screen and (min-width: 768px) {
   .selected {
     grid-column-start: span 3;
     flex-direction: row;
     max-height: 200px;
   }
-
+}
+@media screen and (min-width: 768px) {
   .site-buttons {
     display: flex;
     flex-direction: column;
