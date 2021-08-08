@@ -133,7 +133,7 @@ a {
     flex-direction: column;
     justify-content: space-between;
     height: 400px; 
-    background: linear-gradient(90deg, rgba(162,255,209,1) 0%, rgba(131,255,255,1) 50%, rgba(250,176,255,1) 100%), url(https://previews.dropbox.com/p/thumb/ABQ10tr9lkodAdAciZ0qPBAj8MeRO2JKtxTjhjBe9FkrFF3lUuvjNB7qKPLVfd7kBUfjxM445R7Pnb05gukXQT8D6rGBm1sRwfym2syepNV5b6WcO2D1cJeER32daXXv6mCiTApvkOEQ_3a1Pb8TwIk43BMSK6sWsAHCpzC1ZXaMu2mA7BzWsQwdLaWbcDb6AEfBhj3YfQ6u7WSdKi8hi1mrI9EZ5AIxMbIxWRRZrYrwI9FY2OQ6wIsXCs9oXakl19SuqMzuYy6UJivtfrXQt3rEB6-MS2jHQeas6vNMLC1LOLcTls8KWCPMPOi-0hWUJGQ9TFhWGABvJEvmofuT6_eULNn5MbVqSlJiJejLr3_-zIPxrfdABRAsUC78B5-EVWCxco9e1MHwbLl7jSunHCLmLtZH5TVgNufxHUqHBbt6dusa8tEpsDaKiNRyE8CSeGA/p.jpeg?fv_content=true&size_mode=5); //url(../../img/IMG_0195.JPG);
+    background: linear-gradient(90deg, rgba(162,255,209,1) 0%, rgba(131,255,255,1) 50%, rgba(250,176,255,1) 100%), url(../../img/profile-sm.jpg);
     background-blend-mode: overlay;
     background-size: cover;
     padding: 10px;
@@ -232,6 +232,7 @@ svg {
 @media screen and (min-width: 1024px) {
     .my-card {
         grid-area: personal-card;
+        background: linear-gradient(90deg, rgba(162,255,209,1) 0%, rgba(131,255,255,1) 50%, rgba(250,176,255,1) 100%), url(../../img/profile-lg.jpg);
     }
 
     .site-nav {
