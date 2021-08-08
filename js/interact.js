@@ -1,43 +1,15 @@
-// EXPERIMENTAL
+// EXPERIMENTS
 
-//const box = element.getBoundingClientRect();
-// box.top box.right box.bottom box.left;
-
-// let LastKnownScrollPosition = 0; 
-// let ticking = false;
-
-// function doSomething(scrollPos) {
-//     // Do something with the scroll position
-//   }
-  
-//   document.addEventListener('scroll', function(e) {
-//     lastKnownScrollPosition = window.scrollY;
-  
-//     if (!ticking) {
-//       window.requestAnimationFrame(function() {
-//         doSomething(lastKnownScrollPosition);
-//         ticking = false;
-//       });
-  
-//       ticking = true;
-//     }
-//   });
-
-// Make the DIV element draggable:
+// Make the DIV element draggable: https://www.w3schools.com/howto/howto_js_draggable.asp
 const allCubes = document.querySelectorAll('.project');
 
-// allCubes.forEach(element => dragElement(element));
+allCubes.forEach(element => dragElement(element)); // first box moves others just disappear 
 
-dragElement(document.querySelector(".showcase-one"));
+// dragElement(document.querySelector(".showcase-one"));
 // dragElement(document.querySelector(".showcase-two"));
 
 function dragElement(elmnt) {
   var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
-//   if (document.getElementById(elmnt.id + "header")) {
-//     // if present, the header is where you move the DIV from:
-//     document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
-//   } else {
-    // otherwise, move the DIV from anywhere inside the DIV:
     elmnt.onmousedown = dragMouseDown;
 //   }
 

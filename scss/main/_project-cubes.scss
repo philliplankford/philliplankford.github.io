@@ -4,8 +4,8 @@ $cube-tranZ: math.div($cube-dim, 2) + 3;
 
 $inner-cube-tranZ: math.div($cube-tranZ, 2);
 
-$rotate-x: random(20);
-$rotate-y: random(10);
+$rotate-x: 20;
+$rotate-y: 10;
 
 @keyframes cube-rotate{
   50% {
