@@ -1,112 +1,19 @@
-
 const archiveGrid = document.getElementById("archive-grid");
 
 function addTags(arr) {
     let tagHTML = '';
-    let tags = arr; // elem.tags.split(' ');
+    let tags = arr;
     tags.forEach( element => {
         tagHTML += `<li>${element}</li>`;
     })
     return tagHTML;
 }
 
-let html = ``;
+function buildCube(element, index) {
+    let tagHTML = addTags(element.tags.split(' '));
 
-projects.forEach((elem, ind) => {
-
-    let tagHTML = addTags(elem.tags.split(' '));
-
-    html += `
-    <div class="archive-cube" data-index="${ind}">
-
-    <div class="archive-inner-face archive-inner-front"></div>
-    <div class="archive-inner-face archive-inner-back"></div>
-    <div class="archive-inner-face archive-inner-bottom"></div>
-    <div class="archive-inner-face archive-inner-top"></div>
-    <div class="archive-inner-face archive-inner-left"></div>
-    <div class="archive-inner-face archive-inner-right"></div>
-
-
-    <div class="archive-cube-face archive-cube-front" data-index="${ind}">
-        <a href="#archive-header" class="project-button" data-index="${ind}">
-            ${elem.name}
-        </a>
-    </div>
-    <div class="archive-cube-face archive-cube-back"></div>
-    <div class="archive-cube-face archive-cube-bottom">
-        <p class="project-year">${elem.year}</p>
-    </div>
-    <div class="archive-cube-face archive-cube-top"></div>
-    <div class="archive-cube-face archive-cube-left"></div>
-    <div class="archive-cube-face archive-cube-right" data-index="${ind}">
-        <ul class="cube-tags">
-            ${tagHTML}
-        </ul>
-    </div>
-</div>
-    `
-})
-
-archiveGrid.innerHTML += html;
-const highlight = document.getElementById("selected");
-const archiveFace = document.querySelector(".archive-cube-face");
-
-
-let highlightIndex = 0;
-
-if (localStorage.getItem("highlightIndex")) { highlightIndex = parseInt(localStorage.getItem("highlightIndex")) };
-let tagHTML = addTags(projects[highlightIndex].tags.split(' '));
-
-highlight.innerHTML =  `
-    <div class="archive-cube rotate">
-
-        <div class="archive-inner-face archive-inner-front"></div>
-        <div class="archive-inner-face archive-inner-back"></div>
-        <div class="archive-inner-face archive-inner-bottom"></div>
-        <div class="archive-inner-face archive-inner-top"></div>
-        <div class="archive-inner-face archive-inner-left"></div>
-        <div class="archive-inner-face archive-inner-right"></div>
-
-
-        <div class="archive-cube-face archive-cube-front" data-index="0">
-            <a href="#archive-header" class="project-button" data-index="${highlightIndex}">
-                ${projects[highlightIndex].name}
-            </a>
-        </div>
-        <div class="archive-cube-face archive-cube-back"></div>
-        <div class="archive-cube-face archive-cube-bottom">
-            <p class="project-year">${projects[highlightIndex].year}</p>
-        </div>
-        <div class="archive-cube-face archive-cube-top"></div>
-        <div class="archive-cube-face archive-cube-left"></div>
-        <div class="archive-cube-face archive-cube-right">
-            <ul class="cube-tags">
-                ${tagHTML}
-            </ul>
-        </div>
-    </div>
-    <div class="project-details">
-        <h3>${projects[highlightIndex].name}</h3>
-        <p>${projects[highlightIndex].year}</p>
-        <p>${projects[highlightIndex].description}</p>
-        </div>
-        <div class="site-buttons">
-        <a href="${projects[highlightIndex].siteLink}" class="project-button buffer" target="blank">SITE</a>
-        <a href="${projects[highlightIndex].codeLink}" class="project-button buffer" target="blank">REPO</a>
-    </div>
-
-`
-
-
-archiveGrid.addEventListener("click", (e) => {
-    if (e.target.className === "project-button") {
-        const ind = parseInt(e.target.getAttribute('data-index'));
-        const proj = projects[ind];
-
-        tagHTML = addTags(proj.tags.split(' '));
-        
-        highlight.innerHTML = `
-            <div class="archive-cube rotate" data-index="${ind}">
+    let html = `
+        <div class="archive-cube">
 
             <div class="archive-inner-face archive-inner-front"></div>
             <div class="archive-inner-face archive-inner-back"></div>
@@ -114,16 +21,15 @@ archiveGrid.addEventListener("click", (e) => {
             <div class="archive-inner-face archive-inner-top"></div>
             <div class="archive-inner-face archive-inner-left"></div>
             <div class="archive-inner-face archive-inner-right"></div>
-        
-        
-            <div class="archive-cube-face archive-cube-front" data-index="${ind}">
-                <a href="#archive-header" class="project-button" data-index="${ind}">
-                    ${proj.name}
+
+            <div class="archive-cube-face archive-cube-front">
+                <a href="#archive-header" class="project-button" data-index="${index}">
+                    ${element.name}
                 </a>
             </div>
             <div class="archive-cube-face archive-cube-back"></div>
             <div class="archive-cube-face archive-cube-bottom">
-                <p class="project-year">${proj.year}</p>
+                <p class="project-year">${element.year}</p>
             </div>
             <div class="archive-cube-face archive-cube-top"></div>
             <div class="archive-cube-face archive-cube-left"></div>
@@ -133,15 +39,54 @@ archiveGrid.addEventListener("click", (e) => {
                 </ul>
             </div>
         </div>
+    `
+    return html;
+}
+
+function appendCube(parent, html) {
+    parent.innerHTML += html;
+    html = '';
+}
+
+function addDescription(html, index) {
+    let project = projects[index];
+    let descHTML = 
+    html +
+    `
         <div class="project-details">
-            <h3>${proj.name}</h3>
-            <p>${proj.year}</p>
-            <p>${proj.description}</p>
+            <h3>${project.name}</h3>
+            <p>${project.year}</p>
+            <p>${project.description}</p>
         </div>
         <div class="site-buttons">
-            <a href="${proj.siteLink}" class="project-button buffer" target="blank">SITE</a>
-            <a href="${proj.codeLink}" class="project-button buffer" target="blank">REPO</a>
+            <a href="${project.siteLink}" class="project-button buffer" target="blank">SITE</a>
+            <a href="${project.codeLink}" class="project-button buffer" target="blank">REPO</a>
         </div>
-        `
+    `;
+    return descHTML
+}
+
+// ADD ALL PROJECT CUBES
+
+projects.forEach((elem, ind) => {
+    appendCube(archiveGrid, buildCube(elem, ind));
+})
+
+// MAKE HIGHLIGHT FEATURE
+
+const highlight = document.getElementById("selected"); // breaks if moved above projects.forEach
+
+let highlightIndex = 0;
+
+if (localStorage.getItem("highlightIndex")) { highlightIndex = parseInt(localStorage.getItem("highlightIndex")) };
+
+highlight.innerHTML = addDescription(buildCube(projects[highlightIndex], highlightIndex), highlightIndex);
+
+archiveGrid.addEventListener("click", (e) => {
+    if (e.target.className === "project-button") {
+        const ind = parseInt(e.target.getAttribute('data-index'));
+        const proj = projects[ind];
+
+        highlight.innerHTML = addDescription(buildCube(proj, ind), ind);
     }
 })
