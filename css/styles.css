@@ -597,7 +597,7 @@ svg:hover {
 }
 @keyframes cube-rotate {
   50% {
-    transform: rotateX(3deg) rotateY(10deg);
+    transform: rotateX(14deg) rotateY(8deg);
   }
   100% {
     transform: rotateX(-30deg) rotateY(-40deg);
@@ -1103,6 +1103,7 @@ footer {
   width: 100%;
   justify-content: flex-end;
   margin-top: 20px;
+  height: 100px;
 }
 
 .color-block {

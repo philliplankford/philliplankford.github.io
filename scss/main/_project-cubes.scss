@@ -71,9 +71,10 @@ $rotate-y: random(10);
     }
 }
 
-.project {
-  //position: absolute; //get rid of this to snap to grid
-}
+// for experimental cube dragging
+// .project {
+//   position: absolute;
+// }
 
 .project-button {
   width: 100%;
