@@ -33,7 +33,7 @@ projects = [
         tags: "searchable photo gallery",
         description: "Displays an image gallery using grid. Javascript controls the search functions. Click an image to view a modal displaying the image in full size alongside a caption.",
         codeLink: "https://github.com/philliplankford/techdegree-project-5",
-        siteLink: "",
+        siteLink: "https://philliplankford.github.io/techdegree-project-5/",
         icon: ""
     },
     {
@@ -42,7 +42,7 @@ projects = [
         tags: "responsive form",
         description: "A fully responsive submission form for an email subscription service.",
         codeLink: "https://github.com/philliplankford/techdegree-project-3",
-        siteLink: "",
+        siteLink: "https://philliplankford.github.io/techdegree-project-3/",
         icon: ""
     },
     {
@@ -51,7 +51,7 @@ projects = [
         tags: "responsive",
         description: "An example portfolio to showcase a students developement projects.",
         codeLink: "https://github.com/philliplankford/techdegree-project-2",
-        siteLink: "",
+        siteLink: "https://philliplankford.github.io/techdegree-project-2/",
         icon: ""
     },
 ];

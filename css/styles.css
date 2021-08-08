@@ -594,7 +594,7 @@ svg:hover {
 }
 @keyframes cube-rotate {
   50% {
-    transform: rotateX(6deg) rotateY(10deg);
+    transform: rotateX(7deg) rotateY(1deg);
   }
   100% {
     transform: rotateX(-30deg) rotateY(-40deg);
@@ -1056,14 +1056,15 @@ svg:hover {
 .contact-info h3 {
   position: relative;
   margin-bottom: 10px;
-  letter-spacing: 1.2rem;
+  letter-spacing: 0.7rem;
   padding-left: 5px;
-  border-left: 5rem solid white;
+  border-left: 3rem solid white;
   transition: border-left 0.5s ease, color 0.5s ease;
 }
 @media screen and (min-width: 768px) {
   .contact-info h3 {
-    border-left: 10rem solid white;
+    border-left: 7rem solid white;
+    letter-spacing: 1.2rem;
   }
 }
 .contact-info h3:after {
