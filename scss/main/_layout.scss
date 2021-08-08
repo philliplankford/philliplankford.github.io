@@ -99,6 +99,7 @@ a {
 
 .archive-nav {
     li {
+        a {padding: 7px; }
         padding: 7px; 
         border: 1px solid $col-text;
         color: white;
@@ -112,8 +113,11 @@ a {
 }
 
 .archive-link {
-    height: 28px; // temp nav lineup fix
+    @media screen and (min-width: 1024px) {
+        height: 28px; // temp nav lineup fix
+    }
     padding: 7px; 
+    a {padding: 7px; }
     border: 1px solid $col-text;
     color: white;
     font-weight: 600;

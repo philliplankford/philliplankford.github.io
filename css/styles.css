@@ -437,18 +437,28 @@ a {
   font-weight: 600;
   transition: background-color 0.5s ease-in, color 0.5s ease-in;
 }
+.archive-nav li a {
+  padding: 7px;
+}
 .archive-nav li:hover {
   color: black;
   background-color: white;
 }
 
 .archive-link {
-  height: 28px;
   padding: 7px;
   border: 1px solid white;
   color: white;
   font-weight: 600;
   transition: background-color 0.5s ease-in, color 0.5s ease-in;
+}
+@media screen and (min-width: 1024px) {
+  .archive-link {
+    height: 28px;
+  }
+}
+.archive-link a {
+  padding: 7px;
 }
 .archive-link:hover {
   color: black;
@@ -607,7 +617,7 @@ svg:hover {
 }
 @keyframes cube-rotate {
   50% {
-    transform: rotateX(7deg) rotateY(9deg);
+    transform: rotateX(5deg) rotateY(7deg);
   }
   100% {
     transform: rotateX(-30deg) rotateY(-40deg);
@@ -884,7 +894,6 @@ svg:hover {
 @media screen and (min-width: 768px) {
   .archive-grid {
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 200px);
     height: 100vh;
   }
 }
@@ -898,6 +907,7 @@ svg:hover {
     grid-column-start: span 3;
     flex-direction: row;
     max-height: 200px;
+    margin-top: 20px;
   }
 }
 @media screen and (min-width: 768px) {
@@ -1043,7 +1053,7 @@ svg:hover {
 }
 
 .about {
-  grid-column-start: 1 span 2;
+  grid-column-start: span 2;
 }
 .about p {
   margin-bottom: 10px;
