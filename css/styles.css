@@ -345,7 +345,6 @@ template {
 }
 
 body {
-  width: 100vw;
   height: 100vh;
   padding: 0.5rem;
   background-color: #121212;
@@ -594,7 +593,7 @@ svg:hover {
 }
 @keyframes cube-rotate {
   50% {
-    transform: rotateX(7deg) rotateY(1deg);
+    transform: rotateX(12deg) rotateY(5deg);
   }
   100% {
     transform: rotateX(-30deg) rotateY(-40deg);
@@ -1097,7 +1096,6 @@ footer {
 
 .color-block {
   display: flex;
-  width: 20%;
   height: 20px;
 }
 
