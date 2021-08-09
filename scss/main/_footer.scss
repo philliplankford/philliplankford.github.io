@@ -2,9 +2,27 @@ footer {
     display: flex; 
     flex-direction: row;
     width: 100%;
-    justify-content: flex-end;
+    justify-content: space-between;
     margin-top: 20px;
     height: 100px;
+}
+
+.back-to-top {
+    border: 1px solid white; 
+    color: white;
+    height: 20px;
+    p {    padding: 7px;}
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    opacity: .7;
+    font-size: .8rem;
+    transition: color .5s ease, background-color .5s ease, opacity .5s ease;
+    &:hover {
+        color: black;
+        background-color: white;
+        opacity: 1;
+    }
 }
 
 .color-block {
@@ -19,28 +37,64 @@ footer {
 
 .block-one {
     background-color: $col-accent;
-    width: 10px;
+    width: 5px;
 }
 
 .block-two {
     background-color: $col-highlight;
-    width: 50px;
+    width: 25px;
 }
 
 .block-three {
     background-color: $col-primary;
+    width: 30px;
 }
 
 .block-four {
     background-color: $col-outlines;
-    width: 25px;
+    width: 15px;
 }
 
 .block-five {
     background-color: $col-background;
+    width: 30px;
 }
 
 .block-six {
     background-color: $col-text;
-    width: 25px;
+    width: 15px;
+}
+
+@media screen and (min-width: 768px) {
+
+    .block-one {
+        background-color: $col-accent;
+        width: 10px;
+    }
+    
+    .block-two {
+        background-color: $col-highlight;
+        width: 50px;
+    }
+    
+    .block-three {
+        background-color: $col-primary;
+        width: 100px;
+    }
+    
+    .block-four {
+        background-color: $col-outlines;
+        width: 25px;
+    }
+    
+    .block-five {
+        background-color: $col-background;
+        width: 100px;
+    }
+    
+    .block-six {
+        background-color: $col-text;
+        width: 25px;
+    }
+    
 }
