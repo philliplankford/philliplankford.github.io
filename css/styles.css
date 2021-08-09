@@ -1128,7 +1128,7 @@ footer {
   height: 100px;
 }
 
-.back-to-top {
+#back-to-top {
   border: 1px solid white;
   color: white;
   height: 20px;
@@ -1139,10 +1139,10 @@ footer {
   font-size: 0.8rem;
   transition: color 0.5s ease, background-color 0.5s ease, opacity 0.5s ease;
 }
-.back-to-top p {
+#back-to-top p {
   padding: 7px;
 }
-.back-to-top:hover {
+#back-to-top:hover {
   color: black;
   background-color: white;
   opacity: 1;
