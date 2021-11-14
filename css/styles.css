@@ -1139,11 +1139,9 @@ footer {
   font-size: 0.8rem;
   transition: color 0.5s ease, background-color 0.5s ease, opacity 0.5s ease;
 }
-
 #back-to-top p {
   padding: 7px;
 }
-
 #back-to-top:hover {
   color: black;
   background-color: white;
@@ -1162,27 +1160,27 @@ footer {
 
 .block-one {
   background-color: #a2ffd1;
-  width: 5px;
+  width: 8px;
 }
 
 .block-two {
   background-color: #83ffff;
-  width: 25px;
+  width: 35px;
 }
 
 .block-three {
   background-color: #fab0ff;
-  width: 30px;
+  width: 45px;
 }
 
 .block-four {
   background-color: #404040;
-  width: 15px;
+  width: 23px;
 }
 
 .block-five {
   background-color: #121212;
-  width: 30px;
+  width: 70px;
 }
 
 .block-six {
