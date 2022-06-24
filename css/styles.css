@@ -472,6 +472,7 @@ a {
   height: 400px;
   background: linear-gradient(90deg, #a2ffd1 0%, #83ffff 50%, #fab0ff 100%), url(../../img/profile-sm.jpg);
   background-blend-mode: overlay;
+  background-position-y: -200px;
   background-size: cover;
   padding: 10px;
   position: relative;
@@ -566,7 +567,8 @@ svg:hover {
   .my-card {
     grid-area: personal-card;
     background: linear-gradient(90deg, #a2ffd1 0%, #83ffff 50%, #fab0ff 100%), url(../../img/profile-lg.jpg);
-    background-position-y: -300px;
+    background-position-y: -900px;
+    background-position-x: 650px;
   }
 
   .site-nav {
