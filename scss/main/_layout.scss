@@ -64,6 +64,7 @@ a {
 .outer-wrapper {
     border: 1px solid $col-outlines;
     padding: 5px;
+    // height: calc(100vh - calc(.5rem + 10px));
 }
 
 .show-lg {
@@ -212,7 +213,7 @@ svg {
         display: grid; 
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
-        height: 100vh;
+        // height: 100vh;
         @media screen and (max-height: 660px) {
             overflow-y: scroll;
         }
@@ -271,6 +272,7 @@ svg {
         "personal-card showcase"
         "personal-card site-nav"
         "personal-card projects";
+        height: calc(100vh - calc(.5rem + 10px));
     }
 
     .my-card {

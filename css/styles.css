@@ -555,7 +555,6 @@ svg:hover {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    height: 100vh;
   }
 }
 @media screen and (min-width: 768px) and (max-height: 660px) {
@@ -605,6 +604,7 @@ svg:hover {
     grid-column-gap: 10px;
     grid-row-gap: 10px;
     grid-template-areas: "personal-card showcase" "personal-card site-nav" "personal-card projects";
+    height: calc(100vh - calc(.5rem + 10px));
   }
 
   .my-card {
@@ -1125,7 +1125,7 @@ footer {
   display: flex;
   flex-direction: row;
   width: 100%;
-  justify-content: space-between;
+  justify-content: flex-end;
   margin-top: 20px;
   height: 100px;
 }
