@@ -1,17 +1,17 @@
 // EXPERIMENTS
 
 // Make the DIV element draggable: https://www.w3schools.com/howto/howto_js_draggable.asp
-const allCubes = document.querySelectorAll('.project');
-
-allCubes.forEach(element => dragElement(element)); // first box moves others just disappear 
-
-// dragElement(document.querySelector(".showcase-one"));
-// dragElement(document.querySelector(".showcase-two"));
+dragElement(document.getElementById("cube"));
 
 function dragElement(elmnt) {
   var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+  if (document.getElementById(elmnt.id)) {// + "header")) {
+    /* if present, the header is where you move the DIV from:*/
+    document.getElementById(elmnt.id).onmousedown = dragMouseDown; // + "header").onmousedown = dragMouseDown;
+  } else {
+    /* otherwise, move the DIV from anywhere inside the DIV:*/
     elmnt.onmousedown = dragMouseDown;
-//   }
+  }
 
   function dragMouseDown(e) {
     e = e || window.event;
@@ -38,7 +38,7 @@ function dragElement(elmnt) {
   }
 
   function closeDragElement() {
-    // stop moving when mouse button is released:
+    /* stop moving when mouse button is released:*/
     document.onmouseup = null;
     document.onmousemove = null;
   }
