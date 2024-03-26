@@ -536,7 +536,7 @@ svg:hover {
   .my-card {
     grid-area: personal-card;
     background: linear-gradient(90deg, rgb(162, 255, 209) 0%, rgb(131, 255, 255) 50%, rgb(250, 176, 255) 100%), url(../../img/profile-lg.jpg);
-    background-position-y: -900px;
+    background-position-y: -1800px;
     background-position-x: 650px;
   }
   .site-nav {
