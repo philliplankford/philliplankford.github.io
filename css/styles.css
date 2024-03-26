@@ -441,7 +441,7 @@ a {
   justify-content: space-between;
   height: 400px;
   background: linear-gradient(90deg, rgb(162, 255, 209) 0%, rgb(131, 255, 255) 50%, rgb(250, 176, 255) 100%), url(../../img/profile-sm.jpg);
-  background-position-y: -100px;
+  /*background-position-y: -100px;*/
   background-blend-mode: overlay;
   background-size: cover;
   padding: 10px;
